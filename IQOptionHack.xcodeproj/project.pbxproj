@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275E7D611EAAC11A00A98D49 /* Backgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = 275E7D5E1EAAC11A00A98D49 /* Backgroud.png */; };
+		275E7D621EAAC11A00A98D49 /* ContinueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 275E7D5F1EAAC11A00A98D49 /* ContinueButton.png */; };
+		275E7D631EAAC11A00A98D49 /* SliderOval.png in Resources */ = {isa = PBXBuildFile; fileRef = 275E7D601EAAC11A00A98D49 /* SliderOval.png */; };
+		275E7D681EAAC65600A98D49 /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D671EAAC65600A98D49 /* CustomSlider.m */; };
 		630A86441EAA823B0082233B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A86431EAA823B0082233B /* main.m */; };
 		630A86471EAA823B0082233B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A86461EAA823B0082233B /* AppDelegate.m */; };
 		630A864D1EAA823B0082233B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630A864B1EAA823B0082233B /* Main.storyboard */; };
@@ -17,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		275E7D5E1EAAC11A00A98D49 /* Backgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Backgroud.png; sourceTree = "<group>"; };
+		275E7D5F1EAAC11A00A98D49 /* ContinueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContinueButton.png; sourceTree = "<group>"; };
+		275E7D601EAAC11A00A98D49 /* SliderOval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SliderOval.png; sourceTree = "<group>"; };
+		275E7D661EAAC65600A98D49 /* CustomSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSlider.h; sourceTree = "<group>"; };
+		275E7D671EAAC65600A98D49 /* CustomSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSlider.m; sourceTree = "<group>"; };
 		630A863F1EAA823B0082233B /* IQOptionHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IQOptionHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		630A86431EAA823B0082233B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		630A86451EAA823B0082233B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275E7D5D1EAAC10500A98D49 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				275E7D5E1EAAC11A00A98D49 /* Backgroud.png */,
+				275E7D5F1EAAC11A00A98D49 /* ContinueButton.png */,
+				275E7D601EAAC11A00A98D49 /* SliderOval.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		275E7D641EAAC61500A98D49 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				275E7D661EAAC65600A98D49 /* CustomSlider.h */,
+				275E7D671EAAC65600A98D49 /* CustomSlider.m */,
+			);
+			name = CustomUI;
+			sourceTree = "<group>";
+		};
 		630A86361EAA823B0082233B = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +91,8 @@
 		630A86411EAA823B0082233B /* IQOptionHack */ = {
 			isa = PBXGroup;
 			children = (
+				275E7D641EAAC61500A98D49 /* CustomUI */,
+				275E7D5D1EAAC10500A98D49 /* Images */,
 				630A86451EAA823B0082233B /* AppDelegate.h */,
 				630A86461EAA823B0082233B /* AppDelegate.m */,
 				630A865F1EAAB9930082233B /* Service */,
@@ -178,8 +208,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275E7D631EAAC11A00A98D49 /* SliderOval.png in Resources */,
 				630A86521EAA823B0082233B /* LaunchScreen.storyboard in Resources */,
 				630A864F1EAA823B0082233B /* Assets.xcassets in Resources */,
+				275E7D621EAAC11A00A98D49 /* ContinueButton.png in Resources */,
+				275E7D611EAAC11A00A98D49 /* Backgroud.png in Resources */,
 				630A864D1EAA823B0082233B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +228,7 @@
 				630A86441EAA823B0082233B /* main.m in Sources */,
 				630A865E1EAAACE50082233B /* NewTargetViewController.m in Sources */,
 				630A86621EAAB9B70082233B /* CalculationsService.m in Sources */,
+				275E7D681EAAC65600A98D49 /* CustomSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
