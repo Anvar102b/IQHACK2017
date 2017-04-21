@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "NewTargetOutput.h"
-
+#import "NewTargetInput.h"
 
 @interface CalculationsService : NSObject <NewTargetOutput>
+
+@property (nonatomic, strong) id <NewTargetInput> view;
 
 @end

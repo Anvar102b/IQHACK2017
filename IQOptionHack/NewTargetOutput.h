@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol NewTargetOutput <NSObject>
 
+- (void)setProcent:(CGFloat)procent;
 - (void)didSetTargetPayment:(NSInteger)paymentTarget;
 - (void)didSlideMonthSlider:(NSInteger)monthCount;
-- (void)didSlidePaymentSlider:(NSInteger)paumentValue;
+- (void)didSlidePaymentSlider:(CGFloat)paymentValue;
 
 @end
