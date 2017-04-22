@@ -64,41 +64,6 @@
     _textLayer.frame = _backLayer.frame;
 }
 
-///** 手势交互 */
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    [super touchesBegan:touches withEvent:event];
-//    
-//    UITouch *touch = [touches anyObject];
-//    CGPoint point = [touch locationInView:self];
-//    
-//    [_queryLayer draw_updateFrame:_lineLayer.frame lizard:^(GraphLizard *make) {
-//        
-//        CGPoint start = CGPointMake(point.x, 0);
-//        CGPoint end = CGPointMake(point.x, _lineLayer.height);
-//        
-//        make.makeLine.color(__RGB_GRAY).line(start, end);
-//        make.makeLine.width(0.6).draw();
-//    }];
-//}
-//
-//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event
-//{
-//    UITouch *touch = [touches anyObject];
-//    CGPoint point = [touch locationInView:self];
-//    
-//    NSArray *aryPoints = _pointArys.firstObject;
-//    CGPoint pt = cop_w_x(aryPoints, point);
-//    
-//    [_queryLayer draw_updateFrame:_lineLayer.frame lizard:^(GraphLizard *make) {
-//        
-//        CGPoint start_x = CGPointMake(pt.x, 0);
-//        CGPoint end_x = CGPointMake(pt.x, _lineLayer.height);
-//        
-//        make.makeLine.color(__RGB_BLACK).line(start_x, end_x).offset(CGPointMake(30, 0));
-//        make.makeLine.width(1).draw();
-//    }];
-//}
 
 - (void)loadViewData
 {
@@ -108,6 +73,8 @@
     float min = getAryMin(sumAry);
     
     _baseAry = makeBaseAry(max, min);
+    
+    
 }
 
 /** 循环遍历数据、颜色数组 */
@@ -190,7 +157,7 @@
     CGFloat y = _lineLayer.height / (_baseAry.count - 1);
     
     UIFont *font = [UIFont systemFontOfSize:8];
-    UIColor *txtColor = [UIColor blackColor];
+    UIColor *txtColor = [UIColor grayColor];
     NSArray *base = [[_baseAry reverseObjectEnumerator] allObjects];
     
     [_backLayer draw_updateFrame:_lineLayer.frame lizard:^(GraphLizard *make) {
@@ -211,12 +178,12 @@
            
             CGPoint offset = CGPointMake(idx * x, 4);
             
-            make.makeLine
-                .line(CGPointZero, endy)
-                .x(idx * x)
-                .color(__RGB_GRAY)
-                .width(0.6)
-                .draw();
+//            make.makeLine
+//                .line(CGPointZero, endy)
+//                .x(idx * x)
+//                .color(__RGB_GRAY)
+//                .width(0.6)
+//                .draw();
             
             make.makeText
                 .text(_titleAry[idx])
@@ -233,15 +200,36 @@
         
             CGPoint offset = CGPointMake(-4, idx * y);
             
-            make.makeLine.line(startx, CGPointMake(_lineLayer.width, 0)).y(idx * y);
-            make.makeLine.color(__RGB_GRAY).width(0.6);
+            make.makeLine.line(startx, CGPointMake(_lineLayer.width + 10, 0)).y(idx * y);
+            make.makeLine.color([UIColor lightGrayColor]).width(0.6);
             make.makeLine.draw();
             
-            make.makeText.text([base[idx] stringValue]).font(font).color(txtColor);
-            make.makeText.point(CGPointZero).offset(offset).type(T_LEFT);
+            NSString* strNum = [self suffixNumber:@([base[idx] integerValue])];
+            
+            make.makeText.text(strNum).font(font).color(txtColor);
+            make.makeText.point(CGPointZero).offset(offset).type(T_RIGHT);
             make.makeText.draw();
         }];
     }];
+}
+
+-(NSString*) suffixNumber:(NSNumber*)number {
+    double value = [number doubleValue];
+    NSUInteger index = 0;
+    NSArray *suffixArray = @[@"", @"K", @"M", @"B", @"T", @"P", @"E"];
+
+    while ((value/1000) >= 1){
+    value = value/1000;
+    index++;
+    }
+
+    //3 line of code below for round doubles to 1 digit
+    NSNumberFormatter *fmt = [[NSNumberFormatter alloc] init];
+    [fmt setMaximumFractionDigits:1];
+    NSString *valueWith1Digit = [fmt stringFromNumber:[NSNumber numberWithFloat:value]];
+
+    NSString *svalue = [NSString stringWithFormat:@"%@%@",valueWith1Digit, [suffixArray objectAtIndex:index]];
+    return svalue;
 }
 
 - (void)drawTextLayer
@@ -279,9 +267,9 @@
     [self loadViewData];
     
     [self drawLineLayer];
-    [self drawFillLayer];
-    [self drawRoundLayer];
-    [self drawTextLayer];
+   // [self drawFillLayer];
+   // [self drawRoundLayer];
+   // [self drawTextLayer];
     
     [self stockBackGroundLayer];
 }

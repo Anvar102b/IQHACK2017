@@ -41,7 +41,7 @@ CGFloat aggressive = 0.142/12.0;
     self.calcService = [CalculationsService new];
     self.calcService.view = self;
     [self.calcService setProcent:conservative];
-    [self.calcService didSetTargetPayment:10000];
+    [self.calcService didSetTargetPayment:50000];
     
 }
 
@@ -50,7 +50,6 @@ CGFloat aggressive = 0.142/12.0;
 - (IBAction)didChangeSumValue:(id)sender {
     BOOL enable = self.sumTextField.text.length != 0;
     self.secondSlider.enabled = enable;
-    
     [self.calcService didSetTargetPayment:[self.sumTextField.text integerValue]];
 }
 
@@ -84,8 +83,8 @@ CGFloat aggressive = 0.142/12.0;
                   maxMonthPayment:(CGFloat)maxMonthPayment {
     NSUInteger minValue = ceil(minMonthPayment);
     NSInteger maxValue = ceil(maxMonthPayment);
-    self.secondSlider.minimumValue = maxMonthPayment;
-    self.secondSlider.minimumValue = minMonthPayment;
+//    self.secondSlider.maximumValue = maxMonthPayment;
+//    self.secondSlider.minimumValue = minMonthPayment;
     _minLabel.text = [NSString stringWithFormat:@"%li", maxValue];
     _maxLabel.text = [NSString stringWithFormat:@"%li", minValue];
 }
