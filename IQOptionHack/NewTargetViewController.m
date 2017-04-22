@@ -37,7 +37,7 @@
     
     self.calcService = [CalculationsService new];
     self.calcService.view = self;
-    
+    [self.calcService setProcent:0.125/12.0];
     [self.calcService didSetTargetPayment:100000];
 }
 
