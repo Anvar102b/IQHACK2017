@@ -63,6 +63,7 @@
     return (CGFloat)payment;
 }
 
+
 //Массив для графика месяцы
 
 - (NSArray*)monthsArray {
@@ -78,7 +79,7 @@
     NSMutableArray* cleanChashArray = [NSMutableArray array];
     for (int i = 1; i < self.monthsCount+1; i++) {
         CGFloat monthPay = [self paymentForMonth:self.monthsCount] * (CGFloat)i;
-       //  NSLog(@" yelloyCashArray Ежемесячный платеж платеж: %f", monthPay);
+//         NSLog(@" yelloyCashArray платеж: %f", monthPay);
         [cleanChashArray addObject:@(monthPay)];
     }
     return cleanChashArray;
@@ -88,12 +89,28 @@
 - (NSArray*)greenCashArray {
     NSMutableArray* greenChashArray = [NSMutableArray array];
     for (int i = 1; i < self.monthsCount+1; i++) {
-        CGFloat one = ((pow(1 + self.procent, i)) - 1);
+        CGFloat one = ((CGFloat)(pow(1 + self.procent, i)) - 1);
         CGFloat two = (1 + self.procent) - 1;
         CGFloat monthCash = self.paymentValue * (one/two);
+       // NSLog(@" greenCashArray прибыль: %2.f", monthCash);
+
         [greenChashArray addObject:@(monthCash)];
     }
     return greenChashArray;
+}
+
+- (NSInteger)monthLimit {
+    
+    CGFloat A = self.targetPayment;
+    
+    CGFloat a = [self paymentForMonth:self.monthsCount];
+    
+    CGFloat p = (1 + self.procent) - 1;
+    
+    double limit = log(1 + A/a*p )/log(p);
+    
+    NSInteger lim = ceil(limit);
+    return lim;
 }
 
 

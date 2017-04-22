@@ -108,6 +108,7 @@
     float min = getAryMin(sumAry);
     
     _baseAry = makeBaseAry(max, min);
+
 }
 
 /** 循环遍历数据、颜色数组 */
@@ -217,7 +218,7 @@
 //                .color(__RGB_GRAY)
 //                .width(0.6)
 //                .draw();
-//            
+//
             make.makeText
                 .text(_titleAry[idx])
                 .font(font)
@@ -229,18 +230,18 @@
         }];
         
         // 网格横线以及标志文字
-//        [base enumerateObjectsUsingBlock:^(NSString *text, NSUInteger idx, BOOL * stop) {
-//        
-//            CGPoint offset = CGPointMake(-4, idx * y);
-//            
-//            make.makeLine.line(startx, CGPointMake(_lineLayer.width, 0)).y(idx * y);
-//            make.makeLine.color(__RGB_GRAY).width(0.6);
-//            make.makeLine.draw();
-//            
-//            make.makeText.text([base[idx] stringValue]).font(font).color(txtColor);
-//            make.makeText.point(CGPointZero).offset(offset).type(T_LEFT);
-//            make.makeText.draw();
-//        }];
+        [base enumerateObjectsUsingBlock:^(NSString *text, NSUInteger idx, BOOL * stop) {
+        
+            CGPoint offset = CGPointMake(-4, idx * y);
+            
+            make.makeLine.line(startx, CGPointMake(_lineLayer.width, 0)).y(idx * y);
+            make.makeLine.color([UIColor lightGrayColor]).width(0.6);
+            make.makeLine.draw();
+            
+            make.makeText.text([base[idx] stringValue]).font(font).color(txtColor);
+            make.makeText.point(CGPointZero).offset(offset).type(T_LEFT);
+            make.makeText.draw();
+        }];
     }];
 }
 
@@ -257,7 +258,7 @@
             NSString *str = [dataAry[idx] stringValue];
             
             make.makeText.text(str).color(color).type(T_UPPER);
-//            make.makeText.point([obj CGPointValue]).offset(CGPointMake(30, 18));
+            make.makeText.point([obj CGPointValue]).offset(CGPointMake(30, 18));
             make.makeText.draw();
         }];
     }];
@@ -274,7 +275,19 @@
     [_lineLayer addAnimationForSubLayers:animation];
 }
 
-- (void)stockChart
+- (void)stockChart1
+{
+    [self loadViewData];
+    
+    [self drawLineLayer];
+   // [self drawFillLayer];
+   // [self drawRoundLayer];
+    [self drawTextLayer];
+    
+    [self stockBackGroundLayer];
+}
+
+- (void)stockChart2
 {
     [self loadViewData];
     
@@ -285,5 +298,6 @@
     
     [self stockBackGroundLayer];
 }
+
 
 @end
