@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NewTargetInput.h"
 
-@interface NewTargetViewController : UIViewController
+
+@interface NewTargetViewController : UIViewController <NewTargetInput>
 
 @end

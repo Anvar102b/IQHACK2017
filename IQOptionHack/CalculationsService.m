@@ -54,8 +54,11 @@
 #pragma mark Private 
 
 - (CGFloat)paymentForMonth:(NSInteger)month {
-    double payment = (double)self.targetPayment / ((pow(1 + self.procent, month)) - 1) / ((1 + self.procent) - 1);
-    NSLog(@"Ежемесячный платеж для месяца:%ld платеж:%f", (long)month, (CGFloat)payment);
+    
+    NSLog(@"%f", pow(1 + self.procent, month));
+    
+    CGFloat payment = (CGFloat)self.targetPayment / ((pow(1 + self.procent, month)) - 1) / ((1 + self.procent) - 1);
+    NSLog(@"Ежемесячный платеж для месяца:%ld платеж:%f", (long)month, payment);
     return (CGFloat)payment;
 }
 

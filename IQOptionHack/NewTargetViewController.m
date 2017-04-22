@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet CustomSlider *secondSlider;
 @property (weak, nonatomic) IBOutlet UITextField *sumTextField;
 
+@property (nonatomic, strong) CalculationsService *calcService;
+
 @end
 
 @implementation NewTargetViewController
