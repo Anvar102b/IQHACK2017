@@ -45,7 +45,7 @@
 
 - (void)didSlidePaymentSlider:(CGFloat)paymentValue {
     self.paymentValue = paymentValue;
-    [self.view updateSecondSlider:(CGFloat)self.targetPayment/self.paymentValue];
+    [self.view updateFirstSlider:(CGFloat)self.targetPayment/self.paymentValue];
     [self.view updateChartWithMonthCount:[self monthsArray] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
 }
 

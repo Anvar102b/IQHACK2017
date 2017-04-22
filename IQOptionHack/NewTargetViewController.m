@@ -48,8 +48,8 @@
     self.firstSlider.enabled = enable;
     self.secondSlider.enabled = enable;
     
-    if (enable)
-        [self.calcService didSetTargetPayment:[self.sumTextField.text integerValue]];
+//    if (enable)
+    [self.calcService didSetTargetPayment:[self.sumTextField.text integerValue]];
 }
 
 #pragma mark - UIButton Action
@@ -61,10 +61,12 @@
 #pragma mark - UISlider Action
 
 - (IBAction)didChangeValueFirstSlider:(id)sender {
+    
+    [self.calcService didSlideMonthSlider:ceil(self.firstSlider.value)];
 }
 
 - (IBAction)didChangeValueSecondSlider:(id)sender {
-    NSLog(@"asd");
+    [self.calcService didSlidePaymentSlider:ceil(self.secondSlider.value)];
 }
 
 #pragma mark - NewTargetInput
@@ -99,11 +101,11 @@
 }
 
 - (void)updateFirstSlider:(CGFloat)firstSliderValue {
-    
+    _firstSlider.value = firstSliderValue;
 }
 
 - (void)updateSecondSlider:(CGFloat)secondSliderValue {
-    
+    _secondSlider.value = secondSliderValue;
 }
 
 
