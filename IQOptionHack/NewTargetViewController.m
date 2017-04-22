@@ -8,9 +8,12 @@
 
 #import "NewTargetViewController.h"
 #import "HandlerService.h"
+#import "CalculationsService.h"
 
 @interface NewTargetViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *continueButton;
+
+@property (nonatomic, strong) CalculationsService *calcService;
 
 @end
 
@@ -19,10 +22,57 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    UIImage *buttonImage = [UIImage imageNamed:@"ContinueButton.png"];
-//    self.continueButton.imageView.layer.cornerRadius = 0.5f;
+    
+    self.calcService = [CalculationsService new];
+    self.calcService.view = self;
+    
+    [self.calcService didSetTargetPayment:100000];
+    
+    
     
 }
+
+#pragma mark - NewTargetInput
+
+- (void)enableFirstSlider:(BOOL)enable {
+    
+}
+
+- (void)enableSecondSlider:(BOOL)enable {
+    
+}
+
+- (void)showChart:(BOOL)show {
+    
+}
+
+- (void)calculetedMinMonthPayment:(CGFloat)minMonthPayment
+                  maxMonthPayment:(CGFloat)maxMonthPayment {
+    
+}
+
+- (void)monthPaymentDidChanged:(CGFloat)monthPayment {
+    
+}
+
+- (void)updateChartWithMonthCount:(NSArray*)monthsArray cleanCash:(NSArray*)cleanCash investCash:(NSArray*)investCash {
+    
+}
+
+- (void)monthCountDidChanged:(CGFloat)monthCount {
+    
+}
+
+- (void)updateFirstSlider:(CGFloat)firstSliderValue {
+    
+}
+
+- (void)updateSecondSlider:(CGFloat)secondSliderValue {
+    
+}
+
+
+
 - (IBAction)continueButtonAction:(id)sender {
     
 }

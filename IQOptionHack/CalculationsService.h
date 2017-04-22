@@ -12,6 +12,6 @@
 
 @interface CalculationsService : NSObject <NewTargetOutput>
 
-@property (nonatomic, strong) id <NewTargetInput> view;
+@property (nonatomic, weak) id <NewTargetInput> view;
 
 @end
