@@ -21,5 +21,7 @@
 - (void)monthPaymentDidChanged:(CGFloat)monthPayment;
 - (void)updateChartWithMonthCount:(NSArray*)monthsArray cleanCash:(NSArray*)cleanCash investCash:(NSArray*)investCash;
 - (void)monthCountDidChanged:(CGFloat)monthCount;
+- (void)updateFirstSlider:(CGFloat)firstSliderValue;
+- (void)updateSecondSlider:(CGFloat)secondSliderValue;
 
 @end
