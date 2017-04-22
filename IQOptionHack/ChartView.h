@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ChartView : UIView
+@interface ChartView : CumSumLineView
+
+- (void)updateChartWithMonthCount:(NSArray*)monthsArray cleanCash:(NSArray*)cleanCash investCash:(NSArray*)investCash;
+
 
 @end

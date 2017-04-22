@@ -21,7 +21,7 @@
 @implementation CalculationsService
 
 - (void)setProcent:(CGFloat)procent {
-    self.procent = procent;
+    _procent = procent;
 }
 
 - (void)didSetTargetPayment:(NSInteger)paymentTarget {
@@ -54,11 +54,10 @@
 #pragma mark Private 
 
 - (CGFloat)paymentForMonth:(NSInteger)month {
-    
-    NSLog(@"%f", pow(1 + self.procent, month));
-    
-    CGFloat payment = (CGFloat)self.targetPayment / ((pow(1 + self.procent, month)) - 1) / ((1 + self.procent) - 1);
-    NSLog(@"Ежемесячный платеж для месяца:%ld платеж:%f", (long)month, payment);
+    CGFloat one = ((pow(1 + self.procent, month)) - 1);
+    CGFloat two = (1 + self.procent) - 1;    
+    CGFloat payment = (CGFloat)self.targetPayment / (one/two);
+   // NSLog(@"Ежемесячный платеж для месяца:%ld платеж:%f", (long)month, payment);
     return (CGFloat)payment;
 }
 
@@ -66,8 +65,7 @@
 
 - (NSArray*)monthsArray {
     NSMutableArray* array = [NSMutableArray array];
-    
-    for (int i = 1; i < self.monthsCount; i++) {
+    for (int i = 1; i < self.monthsCount+1; i++) {
         [array addObject:@(i)];
     }
     return array;
@@ -76,8 +74,9 @@
 //Массив значений для желтой линии
 - (NSArray*)yelloyCashArray {
     NSMutableArray* cleanChashArray = [NSMutableArray array];
-    for (int i = 1; i < self.monthsCount; i++) {
-        CGFloat monthPay = [self paymentForMonth:1] * i;
+    for (int i = 1; i < self.monthsCount+1; i++) {
+        CGFloat monthPay = [self paymentForMonth:self.monthsCount] * (CGFloat)i;
+       //  NSLog(@" yelloyCashArray Ежемесячный платеж платеж: %f", monthPay);
         [cleanChashArray addObject:@(monthPay)];
     }
     return cleanChashArray;
@@ -86,8 +85,10 @@
 //Массив значений для зеленой линии
 - (NSArray*)greenCashArray {
     NSMutableArray* greenChashArray = [NSMutableArray array];
-    for (int i = 1; i < self.monthsCount; i++) {
-        CGFloat monthCash = self.paymentValue * ((pow(1 + self.procent, i)) - 1) / ((1 + self.procent) - 1);
+    for (int i = 1; i < self.monthsCount+1; i++) {
+        CGFloat one = ((pow(1 + self.procent, i)) - 1);
+        CGFloat two = (1 + self.procent) - 1;
+        CGFloat monthCash = self.paymentValue * (one/two);
         [greenChashArray addObject:@(monthCash)];
     }
     return greenChashArray;
