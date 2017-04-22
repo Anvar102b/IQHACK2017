@@ -14,4 +14,7 @@
 
 @property (nonatomic, weak) id <NewTargetInput> view;
 
+- (CGFloat)paymentForMonth:(NSInteger)month;
+- (NSInteger)monthLimit:(CGFloat)procent;
+
 @end

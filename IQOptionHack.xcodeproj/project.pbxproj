@@ -12,14 +12,6 @@
 		275E7D631EAAC11A00A98D49 /* SliderOval.png in Resources */ = {isa = PBXBuildFile; fileRef = 275E7D601EAAC11A00A98D49 /* SliderOval.png */; };
 		275E7D681EAAC65600A98D49 /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D671EAAC65600A98D49 /* CustomSlider.m */; };
 		275E7D6C1EAAC9E900A98D49 /* HandlerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D6B1EAAC9E900A98D49 /* HandlerService.m */; };
-		275E7D7E1EAB9BC900A98D49 /* CrossLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D6F1EAB9BC900A98D49 /* CrossLineView.m */; };
-		275E7D7F1EAB9BC900A98D49 /* CumSumBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D711EAB9BC900A98D49 /* CumSumBarView.m */; };
-		275E7D801EAB9BC900A98D49 /* CumSumLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D731EAB9BC900A98D49 /* CumSumLineView.m */; };
-		275E7D811EAB9BC900A98D49 /* HollowFanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D751EAB9BC900A98D49 /* HollowFanView.m */; };
-		275E7D821EAB9BC900A98D49 /* LineBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D771EAB9BC900A98D49 /* LineBarView.m */; };
-		275E7D831EAB9BC900A98D49 /* PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D791EAB9BC900A98D49 /* PieView.m */; };
-		275E7D841EAB9BC900A98D49 /* QueryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D7B1EAB9BC900A98D49 /* QueryView.m */; };
-		275E7D851EAB9BC900A98D49 /* RankBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D7D1EAB9BC900A98D49 /* RankBarView.m */; };
 		275E7D881EAB9BE700A98D49 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D871EAB9BE700A98D49 /* ChartView.m */; };
 		275E7DA51EAB9E8B00A98D49 /* CALayer+SawFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D8B1EAB9E8B00A98D49 /* CALayer+SawFrame.m */; };
 		275E7DA61EAB9E8B00A98D49 /* BarShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D8E1EAB9E8B00A98D49 /* BarShape.m */; };
@@ -33,6 +25,14 @@
 		275E7DAE1EAB9E8B00A98D49 /* LineBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D9F1EAB9E8B00A98D49 /* LineBrush.m */; };
 		275E7DAF1EAB9E8B00A98D49 /* TextBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7DA11EAB9E8B00A98D49 /* TextBrush.m */; };
 		275E7DB01EAB9E8B00A98D49 /* VirginLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7DA31EAB9E8B00A98D49 /* VirginLayer.m */; };
+		27F83D3B1EABFC5400196AB2 /* CrossLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D2C1EABFC5400196AB2 /* CrossLineView.m */; };
+		27F83D3C1EABFC5400196AB2 /* CumSumBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D2E1EABFC5400196AB2 /* CumSumBarView.m */; };
+		27F83D3D1EABFC5400196AB2 /* CumSumLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D301EABFC5400196AB2 /* CumSumLineView.m */; };
+		27F83D3E1EABFC5400196AB2 /* HollowFanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D321EABFC5400196AB2 /* HollowFanView.m */; };
+		27F83D3F1EABFC5400196AB2 /* LineBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D341EABFC5400196AB2 /* LineBarView.m */; };
+		27F83D401EABFC5400196AB2 /* PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D361EABFC5400196AB2 /* PieView.m */; };
+		27F83D411EABFC5400196AB2 /* QueryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D381EABFC5400196AB2 /* QueryView.m */; };
+		27F83D421EABFC5400196AB2 /* RankBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D3A1EABFC5400196AB2 /* RankBarView.m */; };
 		630A86441EAA823B0082233B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A86431EAA823B0082233B /* main.m */; };
 		630A86471EAA823B0082233B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A86461EAA823B0082233B /* AppDelegate.m */; };
 		630A864D1EAA823B0082233B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630A864B1EAA823B0082233B /* Main.storyboard */; };
@@ -50,22 +50,6 @@
 		275E7D671EAAC65600A98D49 /* CustomSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSlider.m; sourceTree = "<group>"; };
 		275E7D6A1EAAC9E900A98D49 /* HandlerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandlerService.h; sourceTree = "<group>"; };
 		275E7D6B1EAAC9E900A98D49 /* HandlerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandlerService.m; sourceTree = "<group>"; };
-		275E7D6E1EAB9BC900A98D49 /* CrossLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossLineView.h; sourceTree = "<group>"; };
-		275E7D6F1EAB9BC900A98D49 /* CrossLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossLineView.m; sourceTree = "<group>"; };
-		275E7D701EAB9BC900A98D49 /* CumSumBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumSumBarView.h; sourceTree = "<group>"; };
-		275E7D711EAB9BC900A98D49 /* CumSumBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumSumBarView.m; sourceTree = "<group>"; };
-		275E7D721EAB9BC900A98D49 /* CumSumLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumSumLineView.h; sourceTree = "<group>"; };
-		275E7D731EAB9BC900A98D49 /* CumSumLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumSumLineView.m; sourceTree = "<group>"; };
-		275E7D741EAB9BC900A98D49 /* HollowFanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HollowFanView.h; sourceTree = "<group>"; };
-		275E7D751EAB9BC900A98D49 /* HollowFanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HollowFanView.m; sourceTree = "<group>"; };
-		275E7D761EAB9BC900A98D49 /* LineBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineBarView.h; sourceTree = "<group>"; };
-		275E7D771EAB9BC900A98D49 /* LineBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBarView.m; sourceTree = "<group>"; };
-		275E7D781EAB9BC900A98D49 /* PieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieView.h; sourceTree = "<group>"; };
-		275E7D791EAB9BC900A98D49 /* PieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieView.m; sourceTree = "<group>"; };
-		275E7D7A1EAB9BC900A98D49 /* QueryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryView.h; sourceTree = "<group>"; };
-		275E7D7B1EAB9BC900A98D49 /* QueryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryView.m; sourceTree = "<group>"; };
-		275E7D7C1EAB9BC900A98D49 /* RankBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankBarView.h; sourceTree = "<group>"; };
-		275E7D7D1EAB9BC900A98D49 /* RankBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankBarView.m; sourceTree = "<group>"; };
 		275E7D861EAB9BE700A98D49 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
 		275E7D871EAB9BE700A98D49 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
 		275E7D8A1EAB9E8B00A98D49 /* CALayer+SawFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+SawFrame.h"; sourceTree = "<group>"; };
@@ -94,6 +78,22 @@
 		275E7DA31EAB9E8B00A98D49 /* VirginLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirginLayer.m; sourceTree = "<group>"; };
 		275E7DA41EAB9E8B00A98D49 /* SawGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SawGraph.h; sourceTree = "<group>"; };
 		275E7DB11EAB9EC500A98D49 /* Colors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
+		27F83D2B1EABFC5400196AB2 /* CrossLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossLineView.h; sourceTree = "<group>"; };
+		27F83D2C1EABFC5400196AB2 /* CrossLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossLineView.m; sourceTree = "<group>"; };
+		27F83D2D1EABFC5400196AB2 /* CumSumBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumSumBarView.h; sourceTree = "<group>"; };
+		27F83D2E1EABFC5400196AB2 /* CumSumBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumSumBarView.m; sourceTree = "<group>"; };
+		27F83D2F1EABFC5400196AB2 /* CumSumLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumSumLineView.h; sourceTree = "<group>"; };
+		27F83D301EABFC5400196AB2 /* CumSumLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumSumLineView.m; sourceTree = "<group>"; };
+		27F83D311EABFC5400196AB2 /* HollowFanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HollowFanView.h; sourceTree = "<group>"; };
+		27F83D321EABFC5400196AB2 /* HollowFanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HollowFanView.m; sourceTree = "<group>"; };
+		27F83D331EABFC5400196AB2 /* LineBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineBarView.h; sourceTree = "<group>"; };
+		27F83D341EABFC5400196AB2 /* LineBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBarView.m; sourceTree = "<group>"; };
+		27F83D351EABFC5400196AB2 /* PieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieView.h; sourceTree = "<group>"; };
+		27F83D361EABFC5400196AB2 /* PieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieView.m; sourceTree = "<group>"; };
+		27F83D371EABFC5400196AB2 /* QueryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryView.h; sourceTree = "<group>"; };
+		27F83D381EABFC5400196AB2 /* QueryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryView.m; sourceTree = "<group>"; };
+		27F83D391EABFC5400196AB2 /* RankBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankBarView.h; sourceTree = "<group>"; };
+		27F83D3A1EABFC5400196AB2 /* RankBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankBarView.m; sourceTree = "<group>"; };
 		630A863F1EAA823B0082233B /* IQOptionHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IQOptionHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		630A86431EAA823B0082233B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		630A86451EAA823B0082233B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,29 +151,6 @@
 			name = Handlers;
 			sourceTree = "<group>";
 		};
-		275E7D6D1EAB9BC900A98D49 /* HSChart */ = {
-			isa = PBXGroup;
-			children = (
-				275E7D6E1EAB9BC900A98D49 /* CrossLineView.h */,
-				275E7D6F1EAB9BC900A98D49 /* CrossLineView.m */,
-				275E7D701EAB9BC900A98D49 /* CumSumBarView.h */,
-				275E7D711EAB9BC900A98D49 /* CumSumBarView.m */,
-				275E7D721EAB9BC900A98D49 /* CumSumLineView.h */,
-				275E7D731EAB9BC900A98D49 /* CumSumLineView.m */,
-				275E7D741EAB9BC900A98D49 /* HollowFanView.h */,
-				275E7D751EAB9BC900A98D49 /* HollowFanView.m */,
-				275E7D761EAB9BC900A98D49 /* LineBarView.h */,
-				275E7D771EAB9BC900A98D49 /* LineBarView.m */,
-				275E7D781EAB9BC900A98D49 /* PieView.h */,
-				275E7D791EAB9BC900A98D49 /* PieView.m */,
-				275E7D7A1EAB9BC900A98D49 /* QueryView.h */,
-				275E7D7B1EAB9BC900A98D49 /* QueryView.m */,
-				275E7D7C1EAB9BC900A98D49 /* RankBarView.h */,
-				275E7D7D1EAB9BC900A98D49 /* RankBarView.m */,
-			);
-			path = HSChart;
-			sourceTree = "<group>";
-		};
 		275E7D891EAB9E8B00A98D49 /* HSGraph */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +199,30 @@
 			path = PixelDrawer;
 			sourceTree = "<group>";
 		};
+		27F83D2A1EABFC5400196AB2 /* HSChart */ = {
+			isa = PBXGroup;
+			children = (
+				27F83D2B1EABFC5400196AB2 /* CrossLineView.h */,
+				27F83D2C1EABFC5400196AB2 /* CrossLineView.m */,
+				27F83D2D1EABFC5400196AB2 /* CumSumBarView.h */,
+				27F83D2E1EABFC5400196AB2 /* CumSumBarView.m */,
+				27F83D2F1EABFC5400196AB2 /* CumSumLineView.h */,
+				27F83D301EABFC5400196AB2 /* CumSumLineView.m */,
+				27F83D311EABFC5400196AB2 /* HollowFanView.h */,
+				27F83D321EABFC5400196AB2 /* HollowFanView.m */,
+				27F83D331EABFC5400196AB2 /* LineBarView.h */,
+				27F83D341EABFC5400196AB2 /* LineBarView.m */,
+				27F83D351EABFC5400196AB2 /* PieView.h */,
+				27F83D361EABFC5400196AB2 /* PieView.m */,
+				27F83D371EABFC5400196AB2 /* QueryView.h */,
+				27F83D381EABFC5400196AB2 /* QueryView.m */,
+				27F83D391EABFC5400196AB2 /* RankBarView.h */,
+				27F83D3A1EABFC5400196AB2 /* RankBarView.m */,
+			);
+			name = HSChart;
+			path = HSGraph/HSChart;
+			sourceTree = "<group>";
+		};
 		630A86361EAA823B0082233B = {
 			isa = PBXGroup;
 			children = (
@@ -241,9 +242,9 @@
 		630A86411EAA823B0082233B /* IQOptionHack */ = {
 			isa = PBXGroup;
 			children = (
+				27F83D2A1EABFC5400196AB2 /* HSChart */,
 				275E7DB11EAB9EC500A98D49 /* Colors.h */,
 				275E7D891EAB9E8B00A98D49 /* HSGraph */,
-				275E7D6D1EAB9BC900A98D49 /* HSChart */,
 				275E7D691EAAC9C700A98D49 /* Handlers */,
 				275E7D641EAAC61500A98D49 /* CustomUI */,
 				275E7D5D1EAAC10500A98D49 /* Images */,
@@ -382,28 +383,28 @@
 				275E7DAD1EAB9E8B00A98D49 /* GraphLizard.m in Sources */,
 				630A86471EAA823B0082233B /* AppDelegate.m in Sources */,
 				630A86441EAA823B0082233B /* main.m in Sources */,
+				27F83D421EABFC5400196AB2 /* RankBarView.m in Sources */,
+				27F83D411EABFC5400196AB2 /* QueryView.m in Sources */,
 				275E7D881EAB9BE700A98D49 /* ChartView.m in Sources */,
+				27F83D401EABFC5400196AB2 /* PieView.m in Sources */,
+				27F83D3D1EABFC5400196AB2 /* CumSumLineView.m in Sources */,
 				275E7DAB1EAB9E8B00A98D49 /* DrawMath.m in Sources */,
 				275E7DAC1EAB9E8B00A98D49 /* BaseBrush.m in Sources */,
 				275E7DA91EAB9E8B00A98D49 /* LineShape.m in Sources */,
+				27F83D3C1EABFC5400196AB2 /* CumSumBarView.m in Sources */,
 				630A865E1EAAACE50082233B /* NewTargetViewController.m in Sources */,
-				275E7D841EAB9BC900A98D49 /* QueryView.m in Sources */,
-				275E7D851EAB9BC900A98D49 /* RankBarView.m in Sources */,
-				275E7D811EAB9BC900A98D49 /* HollowFanView.m in Sources */,
-				275E7D7E1EAB9BC900A98D49 /* CrossLineView.m in Sources */,
-				275E7D801EAB9BC900A98D49 /* CumSumLineView.m in Sources */,
 				275E7DAF1EAB9E8B00A98D49 /* TextBrush.m in Sources */,
 				275E7DA61EAB9E8B00A98D49 /* BarShape.m in Sources */,
-				275E7D7F1EAB9BC900A98D49 /* CumSumBarView.m in Sources */,
 				630A86621EAAB9B70082233B /* CalculationsService.m in Sources */,
+				27F83D3B1EABFC5400196AB2 /* CrossLineView.m in Sources */,
 				275E7DAA1EAB9E8B00A98D49 /* RoundShape.m in Sources */,
 				275E7D6C1EAAC9E900A98D49 /* HandlerService.m in Sources */,
+				27F83D3F1EABFC5400196AB2 /* LineBarView.m in Sources */,
 				275E7DA81EAB9E8B00A98D49 /* GraphSpider.m in Sources */,
-				275E7D831EAB9BC900A98D49 /* PieView.m in Sources */,
+				27F83D3E1EABFC5400196AB2 /* HollowFanView.m in Sources */,
 				275E7DB01EAB9E8B00A98D49 /* VirginLayer.m in Sources */,
 				275E7D681EAAC65600A98D49 /* CustomSlider.m in Sources */,
 				275E7DAE1EAB9E8B00A98D49 /* LineBrush.m in Sources */,
-				275E7D821EAB9BC900A98D49 /* LineBarView.m in Sources */,
 				275E7DA71EAB9E8B00A98D49 /* CALayer+GraDispose.m in Sources */,
 				275E7DA51EAB9E8B00A98D49 /* CALayer+SawFrame.m in Sources */,
 			);

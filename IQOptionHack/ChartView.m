@@ -36,11 +36,11 @@
     
     [self addSubview:self.layView];
     
-    self.layView2 = [[CumSumLineView alloc] initWithFrame:CGRectZero];
-    self.layView2.colorAry = @[[UIColor colorWithRed:0.96 green:0.76 blue:0.19 alpha:1.00]];
-    self.layView2.frame =  self.bounds;
-    
-    [self addSubview:self.layView2];
+//    self.layView2 = [[CumSumLineView alloc] initWithFrame:CGRectZero];
+//    self.layView2.colorAry = @[[UIColor colorWithRed:0.96 green:0.76 blue:0.19 alpha:1.00]];
+//    self.layView2.frame =  self.bounds;
+//    
+//    [self addSubview:self.layView2];
     
     
 }
@@ -56,14 +56,14 @@
         [titleArray addObject:mStr];
     }
     self.layView.titleAry = titleArray;
-    [self.layView stockChart1];
+    [self.layView stockChart];
  //   [self.layView addAnimation];
     
-    _layView2.dataArys =  @[cleanCash];
-    _layView2.titleAry = titleArray;
-    [_layView2 stockChart1];
- //   [_layView2 addAnimation];
-    [self addSubview:_layView2];
+//    _layView2.dataArys =  @[cleanCash];
+//    _layView2.titleAry = titleArray;
+//    [_layView2 stockChart1];
+// //   [_layView2 addAnimation];
+//    [self addSubview:_layView2];
     
 }
 

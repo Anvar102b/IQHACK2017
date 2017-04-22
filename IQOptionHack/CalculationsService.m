@@ -27,30 +27,29 @@
 - (void)didSetTargetPayment:(NSInteger)paymentTarget {
     self.targetPayment = paymentTarget;
     
-    CGFloat minMonthPay = [self paymentForMonth:6];
-    CGFloat maxMonthPay = [self paymentForMonth:12];
-    
-    [self.view updateFirstSlider:6.0f];
-    [self.view updateSecondSlider:maxMonthPay];
+    CGFloat maxMonthPay = 10000;
+    CGFloat minMonthPay = 5000;
     
     self.paymentValue = minMonthPay;
-    self.monthsCount = 6;
+    [self.view updateSecondSlider:maxMonthPay];
+    
+    
+    self.monthsCount = [self monthLimit:_procent];
     [self.view calculetedMinMonthPayment:maxMonthPay maxMonthPayment:minMonthPay];
     
-    [self.view updateChartWithMonthCount:[self monthsArray] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
+    [self.view updateChartWithMonthCount:[self monthsArray:[self monthLimit:_procent]] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
 }
 
 - (void)didSlideMonthSlider:(NSInteger)monthCount {
     self.monthsCount = monthCount;
     self.paymentValue = [self paymentForMonth:self.monthsCount];
     [self.view updateSecondSlider:self.paymentValue];
-    [self.view updateChartWithMonthCount:[self monthsArray] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
+    [self.view updateChartWithMonthCount:[self monthsArray:[self monthLimit:_procent]] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
 }
 
 - (void)didSlidePaymentSlider:(CGFloat)paymentValue {
     self.paymentValue = paymentValue;
-    [self.view updateFirstSlider:(CGFloat)self.targetPayment/self.paymentValue];
-    [self.view updateChartWithMonthCount:[self monthsArray] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
+    [self.view updateChartWithMonthCount:[self monthsArray:[self monthLimit:_procent]] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
 }
 
 #pragma mark Private 
@@ -66,9 +65,9 @@
 
 //Массив для графика месяцы
 
-- (NSArray*)monthsArray {
+- (NSArray*)monthsArray:(NSInteger)monthsCount {
     NSMutableArray* array = [NSMutableArray array];
-    for (int i = 1; i < self.monthsCount+1; i++) {
+    for (int i = 1; i < monthsCount + 1; i++) {
         [array addObject:@(i)];
     }
     return array;
@@ -99,16 +98,11 @@
     return greenChashArray;
 }
 
-- (NSInteger)monthLimit {
-    
+- (NSInteger)monthLimit:(CGFloat)procent {
     CGFloat A = self.targetPayment;
-    
-    CGFloat a = [self paymentForMonth:self.monthsCount];
-    
-    CGFloat p = (1 + self.procent) - 1;
-    
+    CGFloat a =  self.paymentValue; // [self paymentForMonth:self.monthsCount];
+    CGFloat p = (1 + procent) - 1;
     double limit = log(1 + A/a*p )/log(p);
-    
     NSInteger lim = ceil(limit);
     return lim;
 }

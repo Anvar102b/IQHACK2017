@@ -108,7 +108,6 @@
     float min = getAryMin(sumAry);
     
     _baseAry = makeBaseAry(max, min);
-
 }
 
 /** 循环遍历数据、颜色数组 */
@@ -190,8 +189,8 @@
     CGFloat x = _lineLayer.width / (_titleAry.count - 1);
     CGFloat y = _lineLayer.height / (_baseAry.count - 1);
     
-    UIFont *font = [UIFont systemFontOfSize:12.f];
-    UIColor *txtColor = [UIColor grayColor];
+    UIFont *font = [UIFont systemFontOfSize:8];
+    UIColor *txtColor = [UIColor blackColor];
     NSArray *base = [[_baseAry reverseObjectEnumerator] allObjects];
     
     [_backLayer draw_updateFrame:_lineLayer.frame lizard:^(GraphLizard *make) {
@@ -212,13 +211,13 @@
            
             CGPoint offset = CGPointMake(idx * x, 4);
             
-//            make.makeLine
-//                .line(CGPointZero, endy)
-//                .x(idx * x)
-//                .color(__RGB_GRAY)
-//                .width(0.6)
-//                .draw();
-//
+            make.makeLine
+                .line(CGPointZero, endy)
+                .x(idx * x)
+                .color(__RGB_GRAY)
+                .width(0.6)
+                .draw();
+            
             make.makeText
                 .text(_titleAry[idx])
                 .font(font)
@@ -235,7 +234,7 @@
             CGPoint offset = CGPointMake(-4, idx * y);
             
             make.makeLine.line(startx, CGPointMake(_lineLayer.width, 0)).y(idx * y);
-            make.makeLine.color([UIColor lightGrayColor]).width(0.6);
+            make.makeLine.color(__RGB_GRAY).width(0.6);
             make.makeLine.draw();
             
             make.makeText.text([base[idx] stringValue]).font(font).color(txtColor);
@@ -275,19 +274,7 @@
     [_lineLayer addAnimationForSubLayers:animation];
 }
 
-- (void)stockChart1
-{
-    [self loadViewData];
-    
-    [self drawLineLayer];
-   // [self drawFillLayer];
-   // [self drawRoundLayer];
-    [self drawTextLayer];
-    
-    [self stockBackGroundLayer];
-}
-
-- (void)stockChart2
+- (void)stockChart
 {
     [self loadViewData];
     
@@ -298,6 +285,5 @@
     
     [self stockBackGroundLayer];
 }
-
 
 @end

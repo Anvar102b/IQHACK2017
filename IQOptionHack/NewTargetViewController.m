@@ -17,7 +17,6 @@
 @interface NewTargetViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *continueButton;
-@property (weak, nonatomic) IBOutlet CustomSlider *firstSlider;
 @property (weak, nonatomic) IBOutlet CustomSlider *secondSlider;
 @property (weak, nonatomic) IBOutlet UITextField *sumTextField;
 @property (weak, nonatomic) IBOutlet ChartView *chartView;
@@ -26,33 +25,32 @@
 
 
 @property (nonatomic, strong) CalculationsService *calcService;
-
-
 @end
+
+CGFloat conservative = 0.107/12.0;
+CGFloat restrained = 0.121/12.0;
+CGFloat aggressive = 0.142/12.0;
 
 @implementation NewTargetViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.firstSlider.enabled = false;
     self.secondSlider.enabled = false;
     
     self.calcService = [CalculationsService new];
     self.calcService.view = self;
+    [self.calcService setProcent:conservative];
+    [self.calcService didSetTargetPayment:10000];
     
-    [self.calcService setProcent:0.125/12.0];
-    [self.calcService didSetTargetPayment:100000];
 }
 
 #pragma mark - UITextField Action
 
 - (IBAction)didChangeSumValue:(id)sender {
     BOOL enable = self.sumTextField.text.length != 0;
-    self.firstSlider.enabled = enable;
     self.secondSlider.enabled = enable;
     
-//    if (enable)
     [self.calcService didSetTargetPayment:[self.sumTextField.text integerValue]];
 }
 
@@ -63,12 +61,6 @@
 }
 
 #pragma mark - UISlider Action
-
-- (IBAction)didChangeValueFirstSlider:(id)sender {
-    
-    [self.calcService didSlideMonthSlider:ceil(self.firstSlider.value)];
-    NSLog(@"%f", self.firstSlider.value);
-}
 
 - (IBAction)didChangeValueSecondSlider:(id)sender {
     [self.calcService didSlidePaymentSlider:ceil(self.secondSlider.value)];
@@ -92,10 +84,10 @@
                   maxMonthPayment:(CGFloat)maxMonthPayment {
     NSUInteger minValue = ceil(minMonthPayment);
     NSInteger maxValue = ceil(maxMonthPayment);
-    _secondSlider.minimumValue = minValue;
-    _secondSlider.maximumValue = maxValue;
-    _minLabel.text = [NSString stringWithFormat:@"%li", minValue];
-    _maxLabel.text = [NSString stringWithFormat:@"%li", maxValue];
+    self.secondSlider.minimumValue = maxMonthPayment;
+    self.secondSlider.minimumValue = minMonthPayment;
+    _minLabel.text = [NSString stringWithFormat:@"%li", maxValue];
+    _maxLabel.text = [NSString stringWithFormat:@"%li", minValue];
 }
 
 - (void)monthPaymentDidChanged:(CGFloat)monthPayment {
@@ -108,10 +100,6 @@
 
 - (void)monthCountDidChanged:(CGFloat)monthCount {
     
-}
-
-- (void)updateFirstSlider:(CGFloat)firstSliderValue {
-    _firstSlider.value = firstSliderValue;
 }
 
 - (void)updateSecondSlider:(CGFloat)secondSliderValue {
