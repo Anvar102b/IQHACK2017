@@ -36,7 +36,7 @@
 
 - (void)updateChartWithMonthCount:(NSArray*)monthsArray cleanCash:(NSArray*)cleanCash investCash:(NSArray*)investCash {
 
-    self.layView.dataArys =  @[monthsArray,cleanCash];
+    self.layView.dataArys =  @[investCash ,cleanCash];
     
     NSMutableArray* titleArray = [NSMutableArray array];
     

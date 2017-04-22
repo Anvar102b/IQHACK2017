@@ -21,6 +21,9 @@
 @property (weak, nonatomic) IBOutlet CustomSlider *secondSlider;
 @property (weak, nonatomic) IBOutlet UITextField *sumTextField;
 @property (weak, nonatomic) IBOutlet ChartView *chartView;
+@property (weak, nonatomic) IBOutlet UILabel *minLabel;
+@property (weak, nonatomic) IBOutlet UILabel *maxLabel;
+
 
 @property (nonatomic, strong) CalculationsService *calcService;
 
@@ -63,6 +66,7 @@
 - (IBAction)didChangeValueFirstSlider:(id)sender {
     
     [self.calcService didSlideMonthSlider:ceil(self.firstSlider.value)];
+    NSLog(@"%f", self.firstSlider.value);
 }
 
 - (IBAction)didChangeValueSecondSlider:(id)sender {
@@ -85,7 +89,12 @@
 
 - (void)calculetedMinMonthPayment:(CGFloat)minMonthPayment
                   maxMonthPayment:(CGFloat)maxMonthPayment {
-    
+    NSUInteger minValue = ceil(minMonthPayment);
+    NSInteger maxValue = ceil(maxMonthPayment);
+    _secondSlider.minimumValue = minValue;
+    _secondSlider.maximumValue = maxValue;
+    _minLabel.text = [NSString stringWithFormat:@"%li", minValue];
+    _maxLabel.text = [NSString stringWithFormat:@"%li", maxValue];
 }
 
 - (void)monthPaymentDidChanged:(CGFloat)monthPayment {

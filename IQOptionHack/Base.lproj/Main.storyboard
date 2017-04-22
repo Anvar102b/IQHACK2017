@@ -148,6 +148,8 @@
                         <outlet property="ChartView" destination="2Og-gc-7qK" id="OOa-vL-m9D"/>
                         <outlet property="continueButton" destination="d0A-IA-Edj" id="e0D-At-R7I"/>
                         <outlet property="firstSlider" destination="3hj-7d-AUc" id="Zes-X7-DbH"/>
+                        <outlet property="maxLabel" destination="Z3J-PV-ceb" id="yh0-Da-zN4"/>
+                        <outlet property="minLabel" destination="njn-I0-Dzm" id="TPX-1N-hzZ"/>
                         <outlet property="secondSlider" destination="H7F-YN-Ip3" id="wVu-Re-zbk"/>
                         <outlet property="sumTextField" destination="FW7-yi-gAm" id="V8a-Y0-8QE"/>
                     </connections>

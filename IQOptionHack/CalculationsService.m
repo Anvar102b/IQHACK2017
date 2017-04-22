@@ -29,9 +29,13 @@
     
     CGFloat minMonthPay = [self paymentForMonth:6];
     CGFloat maxMonthPay = [self paymentForMonth:12];
+    
+    [self.view updateFirstSlider:6.0f];
+    [self.view updateSecondSlider:maxMonthPay];
+    
     self.paymentValue = minMonthPay;
     self.monthsCount = 6;
-    [self.view calculetedMinMonthPayment:minMonthPay maxMonthPayment:maxMonthPay];
+    [self.view calculetedMinMonthPayment:maxMonthPay maxMonthPayment:minMonthPay];
     
     [self.view updateChartWithMonthCount:[self monthsArray] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
 }
@@ -40,7 +44,7 @@
     self.monthsCount = monthCount;
     self.paymentValue = [self paymentForMonth:self.monthsCount];
     [self.view updateSecondSlider:self.paymentValue];
-    
+    [self.view updateChartWithMonthCount:[self monthsArray] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
 }
 
 - (void)didSlidePaymentSlider:(CGFloat)paymentValue {
