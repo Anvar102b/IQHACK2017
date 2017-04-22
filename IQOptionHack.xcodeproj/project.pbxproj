@@ -25,6 +25,11 @@
 		275E7DAE1EAB9E8B00A98D49 /* LineBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7D9F1EAB9E8B00A98D49 /* LineBrush.m */; };
 		275E7DAF1EAB9E8B00A98D49 /* TextBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7DA11EAB9E8B00A98D49 /* TextBrush.m */; };
 		275E7DB01EAB9E8B00A98D49 /* VirginLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E7DA31EAB9E8B00A98D49 /* VirginLayer.m */; };
+		276A78981EAC12300011D6B7 /* ChoiceStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 276A78971EAC12300011D6B7 /* ChoiceStrategyViewController.m */; };
+		276A789A1EAC13BA0011D6B7 /* StrategyBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78991EAC13BA0011D6B7 /* StrategyBackground.png */; };
+		276A78A61EAC16E10011D6B7 /* FirstStrategyBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78A31EAC16E10011D6B7 /* FirstStrategyBack.png */; };
+		276A78A71EAC16E10011D6B7 /* SecondStrategyBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78A41EAC16E10011D6B7 /* SecondStrategyBack.png */; };
+		276A78A81EAC16E10011D6B7 /* ThirdStrategyBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78A51EAC16E10011D6B7 /* ThirdStrategyBack.png */; };
 		27F83D3B1EABFC5400196AB2 /* CrossLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D2C1EABFC5400196AB2 /* CrossLineView.m */; };
 		27F83D3C1EABFC5400196AB2 /* CumSumBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D2E1EABFC5400196AB2 /* CumSumBarView.m */; };
 		27F83D3D1EABFC5400196AB2 /* CumSumLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D301EABFC5400196AB2 /* CumSumLineView.m */; };
@@ -78,6 +83,12 @@
 		275E7DA31EAB9E8B00A98D49 /* VirginLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirginLayer.m; sourceTree = "<group>"; };
 		275E7DA41EAB9E8B00A98D49 /* SawGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SawGraph.h; sourceTree = "<group>"; };
 		275E7DB11EAB9EC500A98D49 /* Colors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
+		276A78961EAC12300011D6B7 /* ChoiceStrategyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceStrategyViewController.h; sourceTree = "<group>"; };
+		276A78971EAC12300011D6B7 /* ChoiceStrategyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceStrategyViewController.m; sourceTree = "<group>"; };
+		276A78991EAC13BA0011D6B7 /* StrategyBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StrategyBackground.png; sourceTree = "<group>"; };
+		276A78A31EAC16E10011D6B7 /* FirstStrategyBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FirstStrategyBack.png; sourceTree = "<group>"; };
+		276A78A41EAC16E10011D6B7 /* SecondStrategyBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SecondStrategyBack.png; sourceTree = "<group>"; };
+		276A78A51EAC16E10011D6B7 /* ThirdStrategyBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThirdStrategyBack.png; sourceTree = "<group>"; };
 		27F83D2B1EABFC5400196AB2 /* CrossLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossLineView.h; sourceTree = "<group>"; };
 		27F83D2C1EABFC5400196AB2 /* CrossLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossLineView.m; sourceTree = "<group>"; };
 		27F83D2D1EABFC5400196AB2 /* CumSumBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumSumBarView.h; sourceTree = "<group>"; };
@@ -124,6 +135,10 @@
 		275E7D5D1EAAC10500A98D49 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				276A78A31EAC16E10011D6B7 /* FirstStrategyBack.png */,
+				276A78A41EAC16E10011D6B7 /* SecondStrategyBack.png */,
+				276A78A51EAC16E10011D6B7 /* ThirdStrategyBack.png */,
+				276A78991EAC13BA0011D6B7 /* StrategyBackground.png */,
 				275E7D5E1EAAC11A00A98D49 /* Backgroud.png */,
 				275E7D5F1EAAC11A00A98D49 /* ContinueButton.png */,
 				275E7D601EAAC11A00A98D49 /* SliderOval.png */,
@@ -199,6 +214,15 @@
 			path = PixelDrawer;
 			sourceTree = "<group>";
 		};
+		276A78951EAC11DB0011D6B7 /* ChoiceStrategy */ = {
+			isa = PBXGroup;
+			children = (
+				276A78961EAC12300011D6B7 /* ChoiceStrategyViewController.h */,
+				276A78971EAC12300011D6B7 /* ChoiceStrategyViewController.m */,
+			);
+			name = ChoiceStrategy;
+			sourceTree = "<group>";
+		};
 		27F83D2A1EABFC5400196AB2 /* HSChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +296,7 @@
 		630A865A1EAA95EA0082233B /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
+				276A78951EAC11DB0011D6B7 /* ChoiceStrategy */,
 				630A865B1EAA95F90082233B /* NewTarget */,
 			);
 			name = UserStories;
@@ -364,12 +389,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276A789A1EAC13BA0011D6B7 /* StrategyBackground.png in Resources */,
+				276A78A81EAC16E10011D6B7 /* ThirdStrategyBack.png in Resources */,
 				275E7D631EAAC11A00A98D49 /* SliderOval.png in Resources */,
 				630A86521EAA823B0082233B /* LaunchScreen.storyboard in Resources */,
 				630A864F1EAA823B0082233B /* Assets.xcassets in Resources */,
+				276A78A61EAC16E10011D6B7 /* FirstStrategyBack.png in Resources */,
 				275E7D621EAAC11A00A98D49 /* ContinueButton.png in Resources */,
 				275E7D611EAAC11A00A98D49 /* Backgroud.png in Resources */,
 				630A864D1EAA823B0082233B /* Main.storyboard in Resources */,
+				276A78A71EAC16E10011D6B7 /* SecondStrategyBack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +423,7 @@
 				27F83D3C1EABFC5400196AB2 /* CumSumBarView.m in Sources */,
 				630A865E1EAAACE50082233B /* NewTargetViewController.m in Sources */,
 				275E7DAF1EAB9E8B00A98D49 /* TextBrush.m in Sources */,
+				276A78981EAC12300011D6B7 /* ChoiceStrategyViewController.m in Sources */,
 				275E7DA61EAB9E8B00A98D49 /* BarShape.m in Sources */,
 				630A86621EAAB9B70082233B /* CalculationsService.m in Sources */,
 				27F83D3B1EABFC5400196AB2 /* CrossLineView.m in Sources */,
