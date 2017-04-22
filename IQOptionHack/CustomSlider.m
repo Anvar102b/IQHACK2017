@@ -7,6 +7,7 @@
 //
 
 #import "CustomSlider.h"
+#import "HandlerService.h"
 
 @implementation CustomSlider
 
@@ -18,7 +19,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self setThumbImage: [UIImage imageNamed:@"SliderOval"] forState:UIControlStateNormal];
+    UIImage *imageThumb = [UIImage imageNamed:@"SliderOval"];
+    [self setThumbImage:[HandlerService imageWithImage:imageThumb scaledToSize:CGSizeMake(35.f, 35.f)] forState:UIControlStateNormal];
 }
 
 /*
