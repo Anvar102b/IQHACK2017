@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CumSumLineView.h"
 
 @interface ChartView : CumSumLineView
 
