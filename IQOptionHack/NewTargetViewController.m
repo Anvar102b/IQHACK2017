@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet CustomSlider *firstSlider;
 @property (weak, nonatomic) IBOutlet CustomSlider *secondSlider;
 @property (weak, nonatomic) IBOutlet UITextField *sumTextField;
-@property (weak, nonatomic) IBOutlet ChartView *ChartView;
+@property (weak, nonatomic) IBOutlet ChartView *chartView;
 
 @property (nonatomic, strong) CalculationsService *calcService;
 
@@ -91,7 +91,7 @@
 }
 
 - (void)updateChartWithMonthCount:(NSArray*)monthsArray cleanCash:(NSArray*)cleanCash investCash:(NSArray*)investCash {
-    
+    [self.chartView updateChartWithMonthCount:monthsArray cleanCash:cleanCash investCash:investCash];
 }
 
 - (void)monthCountDidChanged:(CGFloat)monthCount {
