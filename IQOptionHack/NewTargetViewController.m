@@ -7,8 +7,10 @@
 //
 
 #import "NewTargetViewController.h"
+#import "HandlerService.h"
 
 @interface NewTargetViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *continueButton;
 
 @end
 
@@ -16,12 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    UIImage *buttonImage = [UIImage imageNamed:@"ContinueButton.png"];
+//    self.continueButton.imageView.layer.cornerRadius = 0.5f;
+    
+}
+- (IBAction)continueButtonAction:(id)sender {
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 /*
 #pragma mark - Navigation
