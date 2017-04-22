@@ -47,6 +47,9 @@
                                 <color key="textColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didChangeSumValue:" destination="BYZ-38-t0r" eventType="editingChanged" id="5MI-2z-A7e"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Необходимая сумма " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haY-jE-Cte">
                                 <rect key="frame" x="123" y="45" width="128" height="21"/>
@@ -62,11 +65,17 @@
                                 <rect key="frame" x="14" y="154" width="347" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" red="0.30588235294117649" green="0.82352941176470584" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="didChangeValueFirstSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="rHL-XQ-k78"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="H7F-YN-Ip3" customClass="CustomSlider">
                                 <rect key="frame" x="14" y="251" width="347" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" red="0.30588235289999999" green="0.82352941180000006" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="didChangeValueSecondSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="9OO-zi-xyd"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6 мес." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK3-26-Q8M">
                                 <rect key="frame" x="16" y="172" width="51" height="21"/>
@@ -137,6 +146,9 @@
                     </view>
                     <connections>
                         <outlet property="continueButton" destination="d0A-IA-Edj" id="e0D-At-R7I"/>
+                        <outlet property="firstSlider" destination="3hj-7d-AUc" id="Zes-X7-DbH"/>
+                        <outlet property="secondSlider" destination="H7F-YN-Ip3" id="wVu-Re-zbk"/>
+                        <outlet property="sumTextField" destination="FW7-yi-gAm" id="V8a-Y0-8QE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

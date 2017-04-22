@@ -8,9 +8,13 @@
 
 #import "NewTargetViewController.h"
 #import "HandlerService.h"
+#import "CustomSlider.h"
 
-@interface NewTargetViewController ()
+@interface NewTargetViewController () <>
 @property (weak, nonatomic) IBOutlet UIButton *continueButton;
+@property (weak, nonatomic) IBOutlet CustomSlider *firstSlider;
+@property (weak, nonatomic) IBOutlet CustomSlider *secondSlider;
+@property (weak, nonatomic) IBOutlet UITextField *sumTextField;
 
 @end
 
@@ -19,14 +23,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    UIImage *buttonImage = [UIImage imageNamed:@"ContinueButton.png"];
-//    self.continueButton.imageView.layer.cornerRadius = 0.5f;
+    self.firstSlider.enabled = false;
+    self.secondSlider.enabled = false;
     
+}
+
+- (IBAction)didChangeSumValue:(id)sender {
+    UITextField
+    if()
 }
 - (IBAction)continueButtonAction:(id)sender {
     
 }
 
+- (IBAction)didChangeValueFirstSlider:(id)sender {
+}
+
+- (IBAction)didChangeValueSecondSlider:(id)sender {
+}
 
 /*
 #pragma mark - Navigation
