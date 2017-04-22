@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CumSumLineView.h"
 
-@interface ChartView : CumSumLineView
+@interface ChartView : UIView
 
 - (void)updateChartWithMonthCount:(NSArray*)monthsArray cleanCash:(NSArray*)cleanCash investCash:(NSArray*)investCash;
 
