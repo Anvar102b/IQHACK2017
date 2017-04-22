@@ -34,8 +34,6 @@
     [self.view calculetedMinMonthPayment:minMonthPay maxMonthPayment:maxMonthPay];
     
     [self.view updateChartWithMonthCount:[self monthsArray] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
-    
-    
 }
 
 - (void)didSlideMonthSlider:(NSInteger)monthCount {

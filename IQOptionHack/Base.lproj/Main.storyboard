@@ -61,7 +61,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3hj-7d-AUc" customClass="CustomSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="6" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="3hj-7d-AUc" customClass="CustomSlider">
                                 <rect key="frame" x="14" y="154" width="347" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" red="0.30588235294117649" green="0.82352941176470584" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
@@ -145,6 +145,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ChartView" destination="2Og-gc-7qK" id="OOa-vL-m9D"/>
                         <outlet property="continueButton" destination="d0A-IA-Edj" id="e0D-At-R7I"/>
                         <outlet property="firstSlider" destination="3hj-7d-AUc" id="Zes-X7-DbH"/>
                         <outlet property="secondSlider" destination="H7F-YN-Ip3" id="wVu-Re-zbk"/>
