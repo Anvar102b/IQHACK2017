@@ -261,7 +261,6 @@
 			children = (
 				276A78961EAC12300011D6B7 /* ChoiceStrategyViewController.h */,
 				276A78971EAC12300011D6B7 /* ChoiceStrategyViewController.m */,
-				630A865B1EAA95F90082233B /* NewTarget */,
 			);
 			name = "Choice Strategy";
 			sourceTree = "<group>";
@@ -348,6 +347,7 @@
 		630A865A1EAA95EA0082233B /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
+				630A865B1EAA95F90082233B /* NewTarget */,
 				276A78A91EAC26D40011D6B7 /* Strategy Detail */,
 				276A78951EAC11DB0011D6B7 /* Choice Strategy */,
 			);

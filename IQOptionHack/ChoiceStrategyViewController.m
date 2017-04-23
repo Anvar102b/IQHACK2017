@@ -49,15 +49,36 @@
 }
 
 - (IBAction)didChoiceFirstStrategy:(id)sender {
-    
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                 bundle: nil];    
+        StrategyDetailViewController *controller = (StrategyDetailViewController*)[mainStoryboard
+                                                           instantiateViewControllerWithIdentifier: @"StrategyDetailViewController"];
+    [controller setModel:self.stategys[0]];
+    [controller setTitleString:@"Консервативная стратегия"];
+    [self.navigationController pushViewController:controller animated:true];
 }
 
 - (IBAction)didChoiceSecondStrategy:(id)sender {
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                             bundle: nil];
+    StrategyDetailViewController *controller = (StrategyDetailViewController*)[mainStoryboard
+                                                                               instantiateViewControllerWithIdentifier: @"StrategyDetailViewController"];
+    [controller setModel:self.stategys[1]];
+    [controller setTitleString:@"Умеренная стратегия"];
     
+    [self.navigationController pushViewController:controller animated:true];
+
 }
 
 - (IBAction)didChoiceThirdStrategy:(id)sender {
-    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                             bundle: nil];
+    StrategyDetailViewController *controller = (StrategyDetailViewController*)[mainStoryboard
+                                                                               instantiateViewControllerWithIdentifier: @"StrategyDetailViewController"];
+    [controller setModel:self.stategys[2]];
+    [controller setTitleString:@"Агрессивная стратегия"];
+    [self.navigationController pushViewController:controller animated:true];
+
 }
 
 - (void)setFirstStrategyMonth:(NSInteger)firstMonth
@@ -71,11 +92,11 @@
 }
 
 - (NSArray *)configModel {
-    return @[@{@"List" : @[@{@"Name" : @"Медицина", @"income" : @10, @"area" : @20},
-                           @{@"Name" : @"ИТ", @"income" : @0, @"area" : @30},
-                           @{@"Name" : @"Недвижимость", @"income" : @10, @"area" : @30},
-                           @{@"Name" : @"Сырье", @"income" : @0, @"area" : @20},
-                           @{@"Name" : @"Ретейл", @"income" : @10, @"area" : @20}
+    return @[@{@"List" : @[@{@"Name" : @"Медицина", @"income" : @10, @"amount" : @20},
+                           @{@"Name" : @"ИТ", @"income" : @0, @"amount" : @30},
+                           @{@"Name" : @"Недвижимость", @"income" : @10, @"amount" : @30},
+                           @{@"Name" : @"Сырье", @"income" : @0, @"amount" : @20},
+                           @{@"Name" : @"Ретейл", @"income" : @10, @"amount" : @20}
                        ]}];
 }
 

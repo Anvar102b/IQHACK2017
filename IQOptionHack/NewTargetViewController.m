@@ -77,11 +77,7 @@ CGFloat aggressive = 0.142/12.0;
 #pragma mark - UIButton Action
 
 - (IBAction)continueButtonAction:(id)sender {
-//    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
-//                                                             bundle: nil];
-//
-//    ChoiceStrategyViewController *controller = (ChoiceStrategyViewController*)[mainStoryboard
-//                                                       instantiateViewControllerWithIdentifier: @"ChoiceStrategyViewController"];
+
 }
 
 #pragma mark - UISlider Action
@@ -150,7 +146,7 @@ CGFloat aggressive = 0.142/12.0;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     ChoiceStrategyViewController *vc  = [segue destinationViewController];
-    [vc setFirstStrategyMonth:self.days1 secondStrategyMonth:self.days2 fhirdStrategyMonth:self.days3 sum:100];
+    [vc setFirstStrategyMonth:self.days1 secondStrategyMonth:self.days2 fhirdStrategyMonth:self.days3 sum:self.secondSlider.value];
 }
 
 @end

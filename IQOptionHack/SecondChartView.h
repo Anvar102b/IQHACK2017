@@ -10,4 +10,5 @@
 
 @interface SecondChartView : UIView
 
+- (void)setProcents:(CGFloat)firstProcent second:(CGFloat)secondProcent third:(CGFloat)thirdProcent fourth:(CGFloat)fourthProcents fifht:(CGFloat)fifhtProcent;
 @end
