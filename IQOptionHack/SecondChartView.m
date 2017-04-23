@@ -34,7 +34,7 @@
                             @[@0, @0, @0, @(self.fourth), @0],
                             @[@0, @0, @(self.third), @0, @0],
                             @[@0, @(self.second), @0, @0, @0],
-                            @[@(self.fifht), @0, @0, @0, @0]];
+                            @[@(self.first), @0, @0, @0, @0]];
     
     [self.chart stockChart];
     [self.chart addAnimation];
