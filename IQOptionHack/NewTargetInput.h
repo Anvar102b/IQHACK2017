@@ -20,6 +20,10 @@
 
 - (void)monthPaymentDidChanged:(CGFloat)monthPayment;
 - (void)updateChartWithMonthCount:(NSArray*)monthsArray cleanCash:(NSArray*)cleanCash investCash:(NSArray*)investCash;
+
+- (void)updateChartWithMonthCount2:(NSArray*)monthsArray2 investCash:(NSArray*)investCash2;
+- (void)updateChartWithMonthCount3:(NSArray*)monthsArray3 investCash:(NSArray*)investCash3;
+
 - (void)monthCountDidChanged:(CGFloat)monthCount;
 //- (void)updateFirstSlider:(CGFloat)firstSliderValue;
 - (void)updateSecondSlider:(CGFloat)secondSliderValue;
