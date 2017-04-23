@@ -10,4 +10,6 @@
 
 @interface BackendService : NSObject
 
+- (void)getSharesWithSum:(NSInteger)sum success:(void (^)(NSArray *arrayData))success;
+
 @end

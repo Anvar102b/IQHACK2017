@@ -9,6 +9,8 @@
 #import "ChoiceStrategyViewController.h"
 #import "StrategyDetailViewController.h"
 
+#import "BackendService.h"
+
 @interface ChoiceStrategyViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *firsdDay;
@@ -20,6 +22,9 @@
 @property (nonatomic, assign) NSInteger first;
 @property (nonatomic, assign) NSInteger second;
 @property (nonatomic, assign) NSInteger third;
+
+@property (nonatomic, strong) NSArray *stategys;
+
 
 @end
 
@@ -36,6 +41,11 @@
     self.firsdDay.text = [NSString stringWithFormat:@"Срок %li д.", self.first * 30];
     self.secondDay.text = [NSString stringWithFormat:@"Срок %li д.", self.second * 30];
     self.thirdDay.text = [NSString stringWithFormat:@"Срок %li д.", self.third * 30];
+    
+    BackendService *service = [[BackendService alloc]init];
+    [service getSharesWithSum:self.sum success:^(NSArray *arrayData) {
+        self.stategys = arrayData;
+    }];
 }
 
 - (IBAction)didChoiceFirstStrategy:(id)sender {

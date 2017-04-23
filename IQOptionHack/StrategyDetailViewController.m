@@ -29,6 +29,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *fourthPrice;
 @property (weak, nonatomic) IBOutlet UILabel *fifthPrice;
 
+
+@property (weak, nonatomic) IBOutlet UILabel *firstColumnProcent;
+@property (weak, nonatomic) IBOutlet UILabel *secondColumnProcent;
+@property (weak, nonatomic) IBOutlet UILabel *thirdColumnProcent;
+@property (weak, nonatomic) IBOutlet UILabel *fourthColumnProcent;
+@property (weak, nonatomic) IBOutlet UILabel *fifthColumnProcent;
+
+
 @property (nonatomic, strong) NSString *titleString;
 @property (nonatomic, strong) NSArray *shares;
 
@@ -47,28 +55,40 @@
     
     NSDictionary *share1 = self.shares[0];
     self.firstName.text = share1[@"Name"];
-    self.firstProcent.text = [NSString stringWithFormat:@"%@%%", [share1[@"income"] stringValue]];
-    self.firstPrice.text = [share1[@"area"] stringValue];
+    NSString *procent1 = [NSString stringWithFormat:@"%@%%", [share1[@"income"] stringValue]];
+    self.firstProcent.text = procent1;
+    self.firstPrice.text = [NSString stringWithFormat:@"%@ р.", [share1[@"area"] stringValue]];
 
     NSDictionary *share2 = self.shares[1];
+    NSString *procent2 = [NSString stringWithFormat:@"%@%%", [share2[@"income"] stringValue]];
     self.secondName.text = share2[@"Name"];
-    self.secondProcent.text = [NSString stringWithFormat:@"%@%%", [share2[@"income"] stringValue]];;
-    self.secondPrice.text = [share2[@"area"] stringValue];
+    self.secondProcent.text = procent2;
+    self.secondPrice.text = [NSString stringWithFormat:@"%@ р.", [share2[@"area"] stringValue]];;
     
     NSDictionary *share3 = self.shares[2];
+    NSString *procent3 = [NSString stringWithFormat:@"%@%%", [share3[@"income"] stringValue]];
     self.thirdName.text = share3[@"Name"];
-    self.thirdProcent.text = [NSString stringWithFormat:@"%@%%", [share3[@"income"] stringValue]];;
-    self.thirdPrice.text = [share3[@"area"] stringValue];
+    self.thirdProcent.text = procent3;
+    self.thirdPrice.text = [NSString stringWithFormat:@"%@ р.", [share3[@"area"] stringValue]];;
     
     NSDictionary *share4 = self.shares[3];
+    NSString *procent4 = [NSString stringWithFormat:@"%@%%", [share4[@"income"] stringValue]];
     self.fourthName.text = share4[@"Name"];
-    self.fourthProcent.text = [NSString stringWithFormat:@"%@%%", [share4[@"income"] stringValue]];;
-    self.fourthPrice.text = [share4[@"area"] stringValue];
+    self.fourthProcent.text = procent4;
+    self.fourthPrice.text = [NSString stringWithFormat:@"%@ р.", [share3[@"area"] stringValue]];;
     
     NSDictionary *share5 = self.shares[4];
+    NSString *procent5 = [NSString stringWithFormat:@"%@%%", [share5[@"income"] stringValue]];
     self.fifthName.text = share5[@"Name"];
-    self.fifthProcent.text = [NSString stringWithFormat:@"%@%%", [share5[@"income"] stringValue]];;
-    self.fifthPrice.text = [share5[@"area"] stringValue];
+    self.fifthProcent.text = procent5;
+    self.fifthPrice.text = [NSString stringWithFormat:@"%@ р.", [share4[@"area"] stringValue]];
+    
+    self.firstColumnProcent.text = procent1;
+    self.secondColumnProcent.text = procent2;
+    self.thirdColumnProcent.text = procent3;
+    self.fourthColumnProcent.text = procent4;
+    self.fifthColumnProcent.text = procent5;
+    
 }
 
 
