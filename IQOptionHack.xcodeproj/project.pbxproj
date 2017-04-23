@@ -31,6 +31,14 @@
 		276A78A71EAC16E10011D6B7 /* SecondStrategyBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78A41EAC16E10011D6B7 /* SecondStrategyBack.png */; };
 		276A78A81EAC16E10011D6B7 /* ThirdStrategyBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78A51EAC16E10011D6B7 /* ThirdStrategyBack.png */; };
 		276A78AC1EAC26FD0011D6B7 /* StrategyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 276A78AB1EAC26FD0011D6B7 /* StrategyDetailViewController.m */; };
+		276A78AE1EAC926B0011D6B7 /* ScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78AD1EAC926B0011D6B7 /* ScreenShot.png */; };
+		276A78B41EAC96160011D6B7 /* fifthOval.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78AF1EAC96160011D6B7 /* fifthOval.png */; };
+		276A78B51EAC96160011D6B7 /* firstOval.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78B01EAC96160011D6B7 /* firstOval.png */; };
+		276A78B61EAC96160011D6B7 /* fourthOval.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78B11EAC96160011D6B7 /* fourthOval.png */; };
+		276A78B71EAC96160011D6B7 /* secondOval.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78B21EAC96160011D6B7 /* secondOval.png */; };
+		276A78B81EAC96160011D6B7 /* thirdOval.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A78B31EAC96160011D6B7 /* thirdOval.png */; };
+		276A78BB1EAC97390011D6B7 /* BackendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 276A78BA1EAC97390011D6B7 /* BackendService.m */; };
+		276A78BE1EAC9C250011D6B7 /* SecondChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 276A78BD1EAC9C250011D6B7 /* SecondChartView.m */; };
 		27F83D3B1EABFC5400196AB2 /* CrossLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D2C1EABFC5400196AB2 /* CrossLineView.m */; };
 		27F83D3C1EABFC5400196AB2 /* CumSumBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D2E1EABFC5400196AB2 /* CumSumBarView.m */; };
 		27F83D3D1EABFC5400196AB2 /* CumSumLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F83D301EABFC5400196AB2 /* CumSumLineView.m */; };
@@ -92,6 +100,16 @@
 		276A78A51EAC16E10011D6B7 /* ThirdStrategyBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThirdStrategyBack.png; sourceTree = "<group>"; };
 		276A78AA1EAC26FD0011D6B7 /* StrategyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrategyDetailViewController.h; sourceTree = "<group>"; };
 		276A78AB1EAC26FD0011D6B7 /* StrategyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrategyDetailViewController.m; sourceTree = "<group>"; };
+		276A78AD1EAC926B0011D6B7 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot.png; sourceTree = "<group>"; };
+		276A78AF1EAC96160011D6B7 /* fifthOval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifthOval.png; sourceTree = "<group>"; };
+		276A78B01EAC96160011D6B7 /* firstOval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstOval.png; sourceTree = "<group>"; };
+		276A78B11EAC96160011D6B7 /* fourthOval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fourthOval.png; sourceTree = "<group>"; };
+		276A78B21EAC96160011D6B7 /* secondOval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondOval.png; sourceTree = "<group>"; };
+		276A78B31EAC96160011D6B7 /* thirdOval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thirdOval.png; sourceTree = "<group>"; };
+		276A78B91EAC97390011D6B7 /* BackendService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendService.h; sourceTree = "<group>"; };
+		276A78BA1EAC97390011D6B7 /* BackendService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackendService.m; sourceTree = "<group>"; };
+		276A78BC1EAC9C250011D6B7 /* SecondChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondChartView.h; sourceTree = "<group>"; };
+		276A78BD1EAC9C250011D6B7 /* SecondChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondChartView.m; sourceTree = "<group>"; };
 		27F83D2B1EABFC5400196AB2 /* CrossLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossLineView.h; sourceTree = "<group>"; };
 		27F83D2C1EABFC5400196AB2 /* CrossLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossLineView.m; sourceTree = "<group>"; };
 		27F83D2D1EABFC5400196AB2 /* CumSumBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumSumBarView.h; sourceTree = "<group>"; };
@@ -138,6 +156,12 @@
 		275E7D5D1EAAC10500A98D49 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				276A78AF1EAC96160011D6B7 /* fifthOval.png */,
+				276A78B01EAC96160011D6B7 /* firstOval.png */,
+				276A78B11EAC96160011D6B7 /* fourthOval.png */,
+				276A78B21EAC96160011D6B7 /* secondOval.png */,
+				276A78B31EAC96160011D6B7 /* thirdOval.png */,
+				276A78AD1EAC926B0011D6B7 /* ScreenShot.png */,
 				276A78A31EAC16E10011D6B7 /* FirstStrategyBack.png */,
 				276A78A41EAC16E10011D6B7 /* SecondStrategyBack.png */,
 				276A78A51EAC16E10011D6B7 /* ThirdStrategyBack.png */,
@@ -156,6 +180,8 @@
 				275E7D671EAAC65600A98D49 /* CustomSlider.m */,
 				275E7D861EAB9BE700A98D49 /* ChartView.h */,
 				275E7D871EAB9BE700A98D49 /* ChartView.m */,
+				276A78BC1EAC9C250011D6B7 /* SecondChartView.h */,
+				276A78BD1EAC9C250011D6B7 /* SecondChartView.m */,
 			);
 			name = CustomUI;
 			sourceTree = "<group>";
@@ -330,6 +356,8 @@
 			children = (
 				630A86601EAAB9B70082233B /* CalculationsService.h */,
 				630A86611EAAB9B70082233B /* CalculationsService.m */,
+				276A78B91EAC97390011D6B7 /* BackendService.h */,
+				276A78BA1EAC97390011D6B7 /* BackendService.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -403,13 +431,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				276A789A1EAC13BA0011D6B7 /* StrategyBackground.png in Resources */,
+				276A78B61EAC96160011D6B7 /* fourthOval.png in Resources */,
 				276A78A81EAC16E10011D6B7 /* ThirdStrategyBack.png in Resources */,
+				276A78B71EAC96160011D6B7 /* secondOval.png in Resources */,
 				275E7D631EAAC11A00A98D49 /* SliderOval.png in Resources */,
 				630A86521EAA823B0082233B /* LaunchScreen.storyboard in Resources */,
+				276A78B51EAC96160011D6B7 /* firstOval.png in Resources */,
+				276A78AE1EAC926B0011D6B7 /* ScreenShot.png in Resources */,
 				630A864F1EAA823B0082233B /* Assets.xcassets in Resources */,
 				276A78A61EAC16E10011D6B7 /* FirstStrategyBack.png in Resources */,
+				276A78B41EAC96160011D6B7 /* fifthOval.png in Resources */,
 				275E7D621EAAC11A00A98D49 /* ContinueButton.png in Resources */,
 				275E7D611EAAC11A00A98D49 /* Backgroud.png in Resources */,
+				276A78B81EAC96160011D6B7 /* thirdOval.png in Resources */,
 				630A864D1EAA823B0082233B /* Main.storyboard in Resources */,
 				276A78A71EAC16E10011D6B7 /* SecondStrategyBack.png in Resources */,
 			);
@@ -450,6 +484,8 @@
 				275E7D681EAAC65600A98D49 /* CustomSlider.m in Sources */,
 				275E7DAE1EAB9E8B00A98D49 /* LineBrush.m in Sources */,
 				275E7DA71EAB9E8B00A98D49 /* CALayer+GraDispose.m in Sources */,
+				276A78BE1EAC9C250011D6B7 /* SecondChartView.m in Sources */,
+				276A78BB1EAC97390011D6B7 /* BackendService.m in Sources */,
 				275E7DA51EAB9E8B00A98D49 /* CALayer+SawFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

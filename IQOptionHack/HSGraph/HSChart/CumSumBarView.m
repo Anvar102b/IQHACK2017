@@ -95,9 +95,9 @@
             
             CGPoint offset = CGPointMake(idx * x + x / 2, 4);
             
-            make.makeLine.line(CGPointZero, endy).x(idx * x);
-            make.makeLine.color(__RGB_GRAY).width(0.6);
-            make.makeLine.draw();
+//            make.makeLine.line(CGPointZero, endy).x(idx * x);
+//            make.makeLine.color(__RGB_GRAY).width(0.6);
+//            make.makeLine.draw();
             
             make.makeText.text(_titleAry[idx]).font(font).color(txtColor);
             make.makeText.point(CGPointMake(0, _barLayer.height)).offset(offset).type(T_BOTTOM);
@@ -116,13 +116,13 @@
             
             CGPoint offset = CGPointMake(-4, idx * y);
             
-            make.makeLine.line(startx, CGPointMake(_barLayer.width, 0)).y(idx * y);
-            make.makeLine.color(__RGB_GRAY).width(0.6);
-            make.makeLine.draw();
-            
-            make.makeText.text([base[idx] stringValue]).font(font).color(txtColor);
-            make.makeText.point(CGPointZero).offset(offset).type(T_LEFT);
-            make.makeText.draw();
+//            make.makeLine.line(startx, CGPointMake(_barLayer.width, 0)).y(idx * y);
+//            make.makeLine.color(__RGB_GRAY).width(0.6);
+//            make.makeLine.draw();
+//            
+//            make.makeText.text([base[idx] stringValue]).font(font).color(txtColor);
+//            make.makeText.point(CGPointZero).offset(offset).type(T_LEFT);
+//            make.makeText.draw();
         }];
     }];
 }
@@ -143,7 +143,7 @@
     [self loadViewData];
     
     [self loadBarLayer];
-    [self stockBackGroundLayer];
+//    [self stockBackGroundLayer];
 }
 
 @end
