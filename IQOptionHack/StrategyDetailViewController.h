@@ -10,4 +10,7 @@
 
 @interface StrategyDetailViewController : UIViewController
 
+- (void)setTitleString:(NSString *)title;
+- (void)setModel:(NSDictionary *)model;
+
 @end

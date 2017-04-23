@@ -9,6 +9,7 @@
 #import "NewTargetViewController.h"
 #import "CustomSlider.h"
 #import "ChartView.h"
+#import "ChoiceStrategyViewController.h"
 
 #import "HandlerService.h"
 #import "CalculationsService.h"
@@ -23,6 +24,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *minLabel;
 @property (weak, nonatomic) IBOutlet UILabel *maxLabel;
 @property (weak, nonatomic) IBOutlet UILabel* paymentMonthly;
+
+@property (nonatomic, assign) NSInteger days1;
+@property (nonatomic, assign) NSInteger days2;
+@property (nonatomic, assign) NSInteger days3;
 
 @property (nonatomic, strong) CalculationsService *calcService;
 @end
@@ -61,13 +66,22 @@ CGFloat aggressive = 0.142/12.0;
         self.secondSlider.enabled = enable;
         [self.calcService didSetTargetPayment:[self.sumTextField.text integerValue]];
     //}
+    
+    
+    BOOL enabled = [self.sumTextField.text integerValue] > 20000;
+    self.continueButton.enabled = enabled;
+    self.continueButton.alpha = enabled ? 1.0f : 0.5f;
 
 }
 
 #pragma mark - UIButton Action
 
 - (IBAction)continueButtonAction:(id)sender {
-    
+//    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
+//                                                             bundle: nil];
+//
+//    ChoiceStrategyViewController *controller = (ChoiceStrategyViewController*)[mainStoryboard
+//                                                       instantiateViewControllerWithIdentifier: @"ChoiceStrategyViewController"];
 }
 
 #pragma mark - UISlider Action
@@ -107,14 +121,17 @@ CGFloat aggressive = 0.142/12.0;
 }
 
 - (void)updateChartWithMonthCount:(NSArray*)monthsArray cleanCash:(NSArray*)cleanCash investCash:(NSArray*)investCash {
+    self.days1 = monthsArray.count;
     [self.chartView updateChartWithMonthCount:monthsArray cleanCash:cleanCash investCash:investCash];
 }
 
 - (void)updateChartWithMonthCount2:(NSArray*)monthsArray2 investCash:(NSArray*)investCash2 {
+    self.days2 = monthsArray2.count;
     [self.chartView updateChartWithMonthCount2:monthsArray2 investCash:investCash2];
 }
 
 - (void)updateChartWithMonthCount3:(NSArray*)monthsArray3 investCash:(NSArray*)investCash3 {
+    self.days3 = monthsArray3.count;
     [self.chartView updateChartWithMonthCount3:monthsArray3 investCash:monthsArray3];
 }
 
@@ -129,14 +146,11 @@ CGFloat aggressive = 0.142/12.0;
 }
 
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    ChoiceStrategyViewController *vc  = [segue destinationViewController];
+    [vc setFirstStrategyMonth:self.days1 secondStrategyMonth:self.days2 fhirdStrategyMonth:self.days3 sum:100];
 }
-*/
 
 @end
