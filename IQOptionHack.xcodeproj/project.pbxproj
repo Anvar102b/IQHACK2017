@@ -361,7 +361,7 @@
 				TargetAttributes = {
 					630A863E1EAA823B0082233B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = EZG8NZS2A2;
+						DevelopmentTeam = GMU2AR93X5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -554,7 +554,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EZG8NZS2A2;
+				DEVELOPMENT_TEAM = GMU2AR93X5;
 				INFOPLIST_FILE = IQOptionHack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -567,7 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EZG8NZS2A2;
+				DEVELOPMENT_TEAM = GMU2AR93X5;
 				INFOPLIST_FILE = IQOptionHack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

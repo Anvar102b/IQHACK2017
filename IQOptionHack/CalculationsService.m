@@ -25,14 +25,14 @@
 }
 
 - (void)didSetTargetPayment:(NSInteger)paymentTarget {
-    
-    if (paymentTarget < 50000) {
+//    
+    if (paymentTarget < 200000) {
         return;
     }
     
     self.targetPayment = paymentTarget;
     
-    CGFloat maxMonthPay = 200000;
+    CGFloat maxMonthPay = 50000;
     CGFloat minMonthPay = 5000;
     
     self.paymentValue = minMonthPay;

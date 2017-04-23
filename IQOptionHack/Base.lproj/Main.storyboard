@@ -79,28 +79,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5000" minValue="5000" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="H7F-YN-Ip3" customClass="CustomSlider">
-                                <rect key="frame" x="14" y="134" width="347" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="minimumTrackTintColor" red="0.30588235289999999" green="0.82352941180000006" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="didChangeValueSecondSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="9OO-zi-xyd"/>
-                                </connections>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="мин" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njn-I0-Dzm">
-                                <rect key="frame" x="16" y="206" width="172" height="21"/>
+                                <rect key="frame" x="16" y="217" width="172" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="макс" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3J-PV-ceb">
-                                <rect key="frame" x="187" y="206" width="172" height="21"/>
+                                <rect key="frame" x="187" y="217" width="172" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJi-Ee-hCk">
+                                <rect key="frame" x="205" y="154" width="154" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5000" minValue="5000" maxValue="50000" translatesAutoresizingMaskIntoConstraints="NO" id="H7F-YN-Ip3" customClass="CustomSlider">
+                                <rect key="frame" x="14" y="184" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.30588235289999999" green="0.82352941180000006" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="didChangeValueSecondSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="9OO-zi-xyd"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -122,6 +129,7 @@
                         <outlet property="continueButton" destination="d0A-IA-Edj" id="e0D-At-R7I"/>
                         <outlet property="maxLabel" destination="Z3J-PV-ceb" id="yh0-Da-zN4"/>
                         <outlet property="minLabel" destination="njn-I0-Dzm" id="TPX-1N-hzZ"/>
+                        <outlet property="paymentMonthly" destination="GJi-Ee-hCk" id="IVQ-1X-EBv"/>
                         <outlet property="secondSlider" destination="H7F-YN-Ip3" id="wVu-Re-zbk"/>
                         <outlet property="sumTextField" destination="FW7-yi-gAm" id="V8a-Y0-8QE"/>
                     </connections>
