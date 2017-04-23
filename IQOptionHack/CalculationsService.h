@@ -17,4 +17,7 @@
 - (CGFloat)paymentForMonth:(NSInteger)month;
 - (NSInteger)monthLimit:(CGFloat)procent;
 
+- (void)setProcent2:(CGFloat)procent2;
+- (void)setProcent3:(CGFloat)procent3;
+
 @end

@@ -54,6 +54,9 @@
 		630A86521EAA823B0082233B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630A86501EAA823B0082233B /* LaunchScreen.storyboard */; };
 		630A865E1EAAACE50082233B /* NewTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A865D1EAAACE50082233B /* NewTargetViewController.m */; };
 		630A86621EAAB9B70082233B /* CalculationsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A86611EAAB9B70082233B /* CalculationsService.m */; };
+		630A86681EAC98810082233B /* Chart2View.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A86671EAC98810082233B /* Chart2View.m */; };
+		630A866B1EAC98990082233B /* Chart3View.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A866A1EAC98990082233B /* Chart3View.m */; };
+		630A866D1EAC9DC20082233B /* legend.png in Resources */ = {isa = PBXBuildFile; fileRef = 630A866C1EAC9DC20082233B /* legend.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +143,11 @@
 		630A86611EAAB9B70082233B /* CalculationsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculationsService.m; sourceTree = "<group>"; };
 		630A86641EAAB9E90082233B /* NewTargetInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTargetInput.h; sourceTree = "<group>"; };
 		630A86651EAAB9F80082233B /* NewTargetOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTargetOutput.h; sourceTree = "<group>"; };
+		630A86661EAC98810082233B /* Chart2View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart2View.h; sourceTree = "<group>"; };
+		630A86671EAC98810082233B /* Chart2View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart2View.m; sourceTree = "<group>"; };
+		630A86691EAC98990082233B /* Chart3View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart3View.h; sourceTree = "<group>"; };
+		630A866A1EAC98990082233B /* Chart3View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart3View.m; sourceTree = "<group>"; };
+		630A866C1EAC9DC20082233B /* legend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = legend.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,7 @@
 				276A78A51EAC16E10011D6B7 /* ThirdStrategyBack.png */,
 				276A78991EAC13BA0011D6B7 /* StrategyBackground.png */,
 				275E7D5E1EAAC11A00A98D49 /* Backgroud.png */,
+				630A866C1EAC9DC20082233B /* legend.png */,
 				275E7D5F1EAAC11A00A98D49 /* ContinueButton.png */,
 				275E7D601EAAC11A00A98D49 /* SliderOval.png */,
 			);
@@ -477,10 +486,12 @@
 				27F83D3B1EABFC5400196AB2 /* CrossLineView.m in Sources */,
 				275E7DAA1EAB9E8B00A98D49 /* RoundShape.m in Sources */,
 				275E7D6C1EAAC9E900A98D49 /* HandlerService.m in Sources */,
+				630A86681EAC98810082233B /* Chart2View.m in Sources */,
 				27F83D3F1EABFC5400196AB2 /* LineBarView.m in Sources */,
 				275E7DA81EAB9E8B00A98D49 /* GraphSpider.m in Sources */,
 				27F83D3E1EABFC5400196AB2 /* HollowFanView.m in Sources */,
 				275E7DB01EAB9E8B00A98D49 /* VirginLayer.m in Sources */,
+				630A866B1EAC98990082233B /* Chart3View.m in Sources */,
 				275E7D681EAAC65600A98D49 /* CustomSlider.m in Sources */,
 				275E7DAE1EAB9E8B00A98D49 /* LineBrush.m in Sources */,
 				275E7DA71EAB9E8B00A98D49 /* CALayer+GraDispose.m in Sources */,

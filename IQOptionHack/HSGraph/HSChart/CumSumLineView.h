@@ -17,6 +17,8 @@
 @property (nonatomic) NSArray *colorAry;
 
 - (void)stockChart;
+- (void)stockChart2;
+- (void)stockChart3;
 
 - (void)addAnimation;
 

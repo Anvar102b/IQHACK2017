@@ -41,7 +41,9 @@ CGFloat aggressive = 0.142/12.0;
     self.calcService = [CalculationsService new];
     self.calcService.view = self;
     [self.calcService setProcent:conservative];
-    [self.calcService didSetTargetPayment:300000];
+    [self.calcService setProcent2:restrained];
+    [self.calcService setProcent3:aggressive];
+//    [self.calcService didSetTargetPayment:300000];
     
 }
 
@@ -54,8 +56,12 @@ CGFloat aggressive = 0.142/12.0;
 
 - (IBAction)didChangeSumValue:(id)sender {
     BOOL enable = self.sumTextField.text.length != 0;
-    self.secondSlider.enabled = enable;
-    [self.calcService didSetTargetPayment:[self.sumTextField.text integerValue]];
+    
+    //if ([self.sumTextField.text integerValue] > 500000) {
+        self.secondSlider.enabled = enable;
+        [self.calcService didSetTargetPayment:[self.sumTextField.text integerValue]];
+    //}
+
 }
 
 #pragma mark - UIButton Action
@@ -67,7 +73,7 @@ CGFloat aggressive = 0.142/12.0;
 #pragma mark - UISlider Action
 
 - (IBAction)didChangeValueSecondSlider:(id)sender {
-    self.paymentMonthly.text = [NSString stringWithFormat:@"%0.f руб.", ceil(self.secondSlider.value)];
+    self.paymentMonthly.text = [NSString stringWithFormat:@"%0.f руб", ceil(self.secondSlider.value)];
     [self.calcService didSlidePaymentSlider:ceil(self.secondSlider.value)];
 }
 
@@ -92,8 +98,8 @@ CGFloat aggressive = 0.142/12.0;
 //    self.secondSlider.maximumValue = maxMonthPayment;
 //    self.secondSlider.minimumValue = minMonthPayment;
     
-    _minLabel.text = [NSString stringWithFormat:@"%li", maxValue];
-    _maxLabel.text = [NSString stringWithFormat:@"%li", minValue];
+    _minLabel.text = [NSString stringWithFormat:@"%li руб", maxValue];
+    _maxLabel.text = [NSString stringWithFormat:@"%li руб", minValue];
 }
 
 - (void)monthPaymentDidChanged:(CGFloat)monthPayment {
@@ -103,6 +109,15 @@ CGFloat aggressive = 0.142/12.0;
 - (void)updateChartWithMonthCount:(NSArray*)monthsArray cleanCash:(NSArray*)cleanCash investCash:(NSArray*)investCash {
     [self.chartView updateChartWithMonthCount:monthsArray cleanCash:cleanCash investCash:investCash];
 }
+
+- (void)updateChartWithMonthCount2:(NSArray*)monthsArray2 investCash:(NSArray*)investCash2 {
+    [self.chartView updateChartWithMonthCount2:monthsArray2 investCash:investCash2];
+}
+
+- (void)updateChartWithMonthCount3:(NSArray*)monthsArray3 investCash:(NSArray*)investCash3 {
+    [self.chartView updateChartWithMonthCount3:monthsArray3 investCash:monthsArray3];
+}
+
 
 - (void)monthCountDidChanged:(CGFloat)monthCount {
     

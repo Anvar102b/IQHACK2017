@@ -15,6 +15,12 @@
 @property (nonatomic, assign) NSInteger monthsCount;
 @property (nonatomic, assign) CGFloat paymentValue;
 
+@property (nonatomic, assign) CGFloat procent2;
+@property (nonatomic, assign) NSInteger monthsCount2;
+
+@property (nonatomic, assign) CGFloat procent3;
+@property (nonatomic, assign) NSInteger monthsCount3;
+
 @end
 
 
@@ -22,6 +28,14 @@
 
 - (void)setProcent:(CGFloat)procent {
     _procent = procent;
+}
+
+- (void)setProcent2:(CGFloat)procent2 {
+    _procent2 = procent2;
+}
+
+- (void)setProcent3:(CGFloat)procent3 {
+    _procent3 = procent3;
 }
 
 - (void)didSetTargetPayment:(NSInteger)paymentTarget {
@@ -39,16 +53,32 @@
     [self.view updateSecondSlider:minMonthPay];
     
     self.monthsCount = [self monthLimit:_procent];
+    self.monthsCount2 = [self monthLimit:_procent2];
+    self.monthsCount3 = [self monthLimit:_procent3];
+    
     [self.view calculetedMinMonthPayment:maxMonthPay maxMonthPayment:minMonthPay];
     
-    [self.view updateChartWithMonthCount:[self monthsArray:[self monthLimit:_procent]] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
+      [self.view updateChartWithMonthCount:[self monthsArray:[self monthLimit:_procent]] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray:_procent monthsCount:[self monthLimit:_procent]]];
+    
+    [self.view updateChartWithMonthCount2:[self monthsArray:[self monthLimit:_procent2]] investCash:[self greenCashArray:_procent monthsCount:[self monthLimit:_procent2]]];
+    
+    [self.view updateChartWithMonthCount3:[self monthsArray:[self monthLimit:_procent3]] investCash:[self greenCashArray:_procent monthsCount:[self monthLimit:_procent3]]];
+    
 }
 
 
 - (void)didSlidePaymentSlider:(CGFloat)paymentValue {
     self.paymentValue = paymentValue;
     self.monthsCount = [self monthLimit:_procent];
-    [self.view updateChartWithMonthCount:[self monthsArray:[self monthLimit:_procent]] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
+    self.monthsCount2 = [self monthLimit:_procent2];
+    self.monthsCount3 = [self monthLimit:_procent3];
+    
+    [self.view updateChartWithMonthCount:[self monthsArray:[self monthLimit:_procent]] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray:_procent monthsCount:[self monthLimit:_procent]]];
+    
+    [self.view updateChartWithMonthCount2:[self monthsArray:[self monthLimit:_procent2]] investCash:[self greenCashArray:_procent monthsCount:[self monthLimit:_procent2]]];
+    
+    [self.view updateChartWithMonthCount3:[self monthsArray:[self monthLimit:_procent3]] investCash:[self greenCashArray:_procent monthsCount:[self monthLimit:_procent3]]];
+    
 }
 
 #pragma mark Private 
@@ -84,11 +114,11 @@
 }
 
 //Массив значений для зеленой линии
-- (NSArray*)greenCashArray {
+- (NSArray*)greenCashArray:(CGFloat)procent monthsCount:(NSInteger)monthCount {
     NSMutableArray* greenChashArray = [NSMutableArray array];
-    for (int i = 1; i < self.monthsCount+1; i++) {
-        CGFloat one = ((CGFloat)(pow(1 + self.procent, i)) - 1);
-        CGFloat two = (1 + self.procent) - 1;
+    for (int i = 1; i < monthCount+1; i++) {
+        CGFloat one = ((CGFloat)(pow(1 + procent, i)) - 1);
+        CGFloat two = (1 + procent) - 1;
         CGFloat monthCash = self.paymentValue * (one/two);
         NSLog(@" greenCashArray прибыль: %2.f", monthCash);
 

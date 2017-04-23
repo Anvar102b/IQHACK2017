@@ -104,7 +104,7 @@
         
         self.repeat(^(NSArray *data, UIColor *color){
             
-            make.drawLine.drawAry(data).color(color).witdth(1);
+            make.drawLine.drawAry(data).color(color).witdth(3);
         });
     }];
 }
@@ -185,7 +185,8 @@
 //                .width(0.6)
 //                .draw();
             
-            make.makeText
+            if (_titleAry.count < 25) {
+                make.makeText
                 .text(_titleAry[idx])
                 .font(font)
                 .color(txtColor)
@@ -193,12 +194,16 @@
                 .offset(offset)
                 .type(T_BOTTOM)
                 .draw();
+            }
+            
+            
+
         }];
         
         // 网格横线以及标志文字
         [base enumerateObjectsUsingBlock:^(NSString *text, NSUInteger idx, BOOL * stop) {
         
-            CGPoint offset = CGPointMake(-4, idx * y);
+            CGPoint offset = CGPointMake(-4, idx * y - 10.0);
             
             make.makeLine.line(startx, CGPointMake(_lineLayer.width + 10, 0)).y(idx * y);
             make.makeLine.color([UIColor lightGrayColor]).width(0.6);
@@ -272,6 +277,30 @@
    // [self drawTextLayer];
     
     [self stockBackGroundLayer];
+}
+
+- (void)stockChart2
+{
+    [self loadViewData];
+    
+    [self drawLineLayer];
+    // [self drawFillLayer];
+    // [self drawRoundLayer];
+    // [self drawTextLayer];
+    
+ //   [self stockBackGroundLayer];
+}
+
+- (void)stockChart3
+{
+    [self loadViewData];
+    
+    [self drawLineLayer];
+    // [self drawFillLayer];
+    // [self drawRoundLayer];
+    // [self drawTextLayer];
+    
+  //  [self stockBackGroundLayer];
 }
 
 @end
