@@ -10,6 +10,8 @@
 
 @interface ChoiceStrategyViewController : UIViewController
 
-- (void)setDays:(NSInteger)days sum:(CGFloat)sum;
-
+- (void)setFirstStrategyMonth:(NSInteger)firstMonth
+          secondStrategyMonth:(NSInteger)secondMonth
+           fhirdStrategyMonth:(NSInteger)thirdMonth
+                          sum:(CGFloat)sum;
 @end
