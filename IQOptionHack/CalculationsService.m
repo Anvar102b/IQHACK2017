@@ -25,14 +25,18 @@
 }
 
 - (void)didSetTargetPayment:(NSInteger)paymentTarget {
+//    
+    if (paymentTarget < 200000) {
+        return;
+    }
+    
     self.targetPayment = paymentTarget;
     
-    CGFloat maxMonthPay = 10000;
+    CGFloat maxMonthPay = 50000;
     CGFloat minMonthPay = 5000;
     
     self.paymentValue = minMonthPay;
-    [self.view updateSecondSlider:maxMonthPay];
-    
+    [self.view updateSecondSlider:minMonthPay];
     
     self.monthsCount = [self monthLimit:_procent];
     [self.view calculetedMinMonthPayment:maxMonthPay maxMonthPayment:minMonthPay];
@@ -40,15 +44,10 @@
     [self.view updateChartWithMonthCount:[self monthsArray:[self monthLimit:_procent]] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
 }
 
-- (void)didSlideMonthSlider:(NSInteger)monthCount {
-    self.monthsCount = monthCount;
-    self.paymentValue = [self paymentForMonth:self.monthsCount];
-    [self.view updateSecondSlider:self.paymentValue];
-    [self.view updateChartWithMonthCount:[self monthsArray:[self monthLimit:_procent]] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
-}
 
 - (void)didSlidePaymentSlider:(CGFloat)paymentValue {
     self.paymentValue = paymentValue;
+    self.monthsCount = [self monthLimit:_procent];
     [self.view updateChartWithMonthCount:[self monthsArray:[self monthLimit:_procent]] cleanCash:[self yelloyCashArray] investCash:[self greenCashArray]];
 }
 
@@ -91,7 +90,7 @@
         CGFloat one = ((CGFloat)(pow(1 + self.procent, i)) - 1);
         CGFloat two = (1 + self.procent) - 1;
         CGFloat monthCash = self.paymentValue * (one/two);
-       // NSLog(@" greenCashArray прибыль: %2.f", monthCash);
+        NSLog(@" greenCashArray прибыль: %2.f", monthCash);
 
         [greenChashArray addObject:@(monthCash)];
     }
@@ -101,8 +100,10 @@
 - (NSInteger)monthLimit:(CGFloat)procent {
     CGFloat A = self.targetPayment;
     CGFloat a =  self.paymentValue; // [self paymentForMonth:self.monthsCount];
-    CGFloat p = (1 + procent) - 1;
-    double limit = log(1 + A/a*p )/log(p);
+    CGFloat p = 1 + procent;
+    A = A*(p-1);
+    
+    double limit = log(1 + A/a)/log(p);
     NSInteger lim = ceil(limit);
     return lim;
 }
